@@ -1,2 +1,8 @@
 
 Unit 1, Number Systems, converting Binary, Decimal, and Hexadecimal
+  Lab #2a: Converted IPv4, IPv6, Binary, and Hexadecimal numbers respectively
+    Decimal to Binary: Subtract the largest number possible each time using binary until nothing remains while creating the binary "1s" in their repective places
+    Hexadecimal to Binary: Seperate each hexadecimal number, and convert it into a 4 bit binary string, then recombine the strings to get the number
+    Binary to Decimal/Hexadecimal: If Decimal, add the number to the decimal string until the final number is given, and if Hexadecimal, break the Binary string into sets of 4, change them into a hexadecimal number, then combine them
+  Lab #2b: Used a virtual machine through a existing file
+    Downloaded a VM file, opened it using VMware, then powered on and used it
