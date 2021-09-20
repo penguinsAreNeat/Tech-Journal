@@ -11,3 +11,6 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
     systeminfo: outputs system information, such as CPU and NIC
     Write out commands, then use ">" and a filename.txt to output results
     Use "set" commands to create variables, as well as set values with %examplevalue%
+   Lab #4: Used cmd on a virtual machine to analyze CPU statistics
+    Launch Task Manager from Ctrl-Alt-Del or Ctrl-Shift-Esc
+    Use wmic to analyze information on a process (ex. use "wmic cpu get _____"), such as cores and L2 space
