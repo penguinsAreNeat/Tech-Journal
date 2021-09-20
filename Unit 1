@@ -1,5 +1,5 @@
 
-Unit 1, Number Systems, converting Binary, Decimal, and Hexadecimal
+Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
   Lab #2a: Converted IPv4, IPv6, Binary, and Hexadecimal numbers respectively
     Decimal to Binary: Subtract the largest number possible each time using binary until nothing remains while creating the binary "1s" in their repective places
     Hexadecimal to Binary: Seperate each hexadecimal number, and convert it into a 4 bit binary string, then recombine the strings to get the number
