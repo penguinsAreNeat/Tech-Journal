@@ -14,3 +14,9 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
    Lab #4: Used cmd on a virtual machine to analyze CPU statistics
     Launch Task Manager from Ctrl-Alt-Del or Ctrl-Shift-Esc
     Use wmic to analyze information on a process (ex. use "wmic cpu get _____"), such as cores and L2 space
+   Lab #5: Used cmd to dump files in RAM memory from a VM, including the password hashes of users\
+    Use Volaility with "vol.exe"
+      plist shows running programs, cmdline shows file path to process, hashdump prints the password hashes to screen
+      procdump exports data on a process to a set folder in .txt format
+   
+  
