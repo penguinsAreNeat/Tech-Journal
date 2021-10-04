@@ -18,5 +18,6 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
     Use Volaility with "vol.exe"
       plist shows running programs, cmdline shows file path to process, hashdump prints the password hashes to screen
       procdump exports data on a process to a set folder in .txt format
-   
-  
+   Lab #6: Used wmic on C: drive to find disk informaiton
+     Disk space can be viewed through properties
+     Use "wmic (diskdrive/logicaldrive) get ________" for drive information (logicaldrive is the disk formatted by the OS, and doesn't use all disk space)
