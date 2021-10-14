@@ -20,7 +20,7 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
       procdump exports data on a process to a set folder in .txt format
    Lab #6: Used wmic on C: drive to find disk informaiton
      Disk space can be viewed through properties
-     Use "wmic (diskdrive/logicaldrive) get ________" for drive information (logicaldrive is the disk formatted by the OS, and doesn't use all disk space)
+     Use "wmic (diskdrive/logicaldrive) get ________" for drive information (logicaldrive is the disk formatted by the OS, and doesn't use all disk space) such as tracks, cylinders, sectors, and total disk size
    Chapter 6 readings:
      For me, the three most important componets are the CPU, RAM, and the motherboard. For my family memeberss, I would prioritize the case, CPU, and graphics card
      When my monitor failed to turn on, I ended up trying random things to see if the computer was on, and verified that the monitor weas recieving power. Through trial and error I eventually figured out that there were no batteries in the remote (the monitor was a repurposed TV), which although was not what the book recommended, I don't think I would follow it due to me being a bit lazy
