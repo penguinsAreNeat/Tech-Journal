@@ -24,3 +24,8 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
    Chapter 6 readings:
      For me, the three most important componets are the CPU, RAM, and the motherboard. For my family memeberss, I would prioritize the case, CPU, and graphics card
      When my monitor failed to turn on, I ended up trying random things to see if the computer was on, and verified that the monitor weas recieving power. Through trial and error I eventually figured out that there were no batteries in the remote (the monitor was a repurposed TV), which although was not what the book recommended, I don't think I would follow it due to me being a bit lazy
+  Lab #8: Used Microsoft SysInternals to view Startup, Autorun, and Disk Usage on a Windows VM
+     Working Set: Amount of recently used data (RAM) by a process
+     Private Bytes: Data that has been allocated to a process and cannot be shared
+     Use "autorunsc.exe" to run Autoruns via command line, and -c to export a copy of the data (include ">" and file name to .csv)
+     Use "du –c “c:\Program Files\*”" to run Disk Utility, and -C to list output as .csv or -l to list commands
