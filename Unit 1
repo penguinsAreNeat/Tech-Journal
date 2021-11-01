@@ -29,3 +29,9 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
      Private Bytes: Data that has been allocated to a process and cannot be shared
      Use "autorunsc.exe" to run Autoruns via command line, and -c to export a copy of the data (include ">" and file name to .csv)
      Use "du –c “c:\Program Files\*”" to run Disk Utility, and -C to list output as .csv or -l to list commands
+  Lab #9: Used Windows Ease of Access options to experiment with display settings
+     Text size can be adjusted in display settings
+     Color filter/high contrast can be found under the Ease of Acess menu in Settings
+     Stickey keys can be toggled under the Ease of Access menu found in Ctrl-Alt-Del
+     Keyboard layout can be changed through the Change Input Methods, in Clock, Language and Region under Control Panel
+     
