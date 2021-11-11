@@ -34,4 +34,9 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
      Color filter/high contrast can be found under the Ease of Acess menu in Settings
      Stickey keys can be toggled under the Ease of Access menu found in Ctrl-Alt-Del
      Keyboard layout can be changed through the Change Input Methods, in Clock, Language and Region under Control Panel
+  Lab #10a: Used ping, nslookup, and tracert to find Champlain's webserver
+     "ping" sends 4 packets to a target IP
+     "nslookup" find the name of a server with it's IP address
+     "tracert" pings a IP address, then sends information on each server/relay it goes through back to the computer
+  Lab #10b: 
      
