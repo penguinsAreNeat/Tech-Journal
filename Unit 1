@@ -41,4 +41,7 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
   Lab #10b: Downloaded sysinternal programs to research public information via cmd
     TCPView provides data like a advanced task manager moniter
     whois (used in cmd) provides some information when given a DNS server
+  Lab #11b: Used a xubuntu VM to experiment with Terminal
+    Learned how to look up linux commands in the manual, and how to use basic commands, as well as grep
+    Used man to look up commands, sudo to use admin privlages, and grep to narrow search results
      
