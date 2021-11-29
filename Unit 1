@@ -48,5 +48,9 @@ Unit 2, Number Systems, converting Binary, Decimal, and Hexadecimal
     Powershell can be run (as admin) from the windows start menu
     Script policy: Set-ExecutionPolicy -ExecutionPolicy [value, such as "unrestricted"]
     Values can be stored with the "$" commandlet and string name, which differ from cmd in that you don't need a command to create a variable
+  Lab #13a: User account polices, viewed using the "net accounts" cmd and Local Security Policy
+    The command "net accounts" displays the password policies of the machine
+    Local Security Policy can be accessed through the Windows menu search
+    Password/Lockout polices can be changed through Local Security Policy
     
      
