@@ -1,0 +1,13 @@
+Overview
+  (text) indicates a option for a command
+  [text] indicates required information to use the function
+
+Unit 1
+  Lab 1 - Used cmd commands to find informaiton on local and remote servers
+    ipconfig (/all) - displays local IP information (/all displays additional information)
+    ping [IP address] - sends 4 packets to target IP to test connectivity
+    tracert [IP address] - displays what IP the packets go through on their way to target destination
+    nslookup [DNS address] - displays DNS and IP information of a website address
+    
+    To open Command Prompt, hit the windows key/search bar and enter cmd
+    
