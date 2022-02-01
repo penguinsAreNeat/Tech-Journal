@@ -12,4 +12,11 @@ Unit 1
     To open Command Prompt, hit the windows key/search bar and enter cmd
 
 Unit 2
-  Lab 1 - 
+  Lab 1 - Using packet tracer
+    Deploy hardware by selecting and dragging it from the bottom menu
+    Connect cables though the same manner, and clicking what you want to connect
+    To acess terminal, click the PC, Desktop, Terminak
+  Lab 2 - Using WireShark
+    Use the start/stop buttons to capture packets
+    Sort through packets by clicking the column labels or using the search bar at the top
+    arp (-a) - modifies internet address table
