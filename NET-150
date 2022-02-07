@@ -20,3 +20,7 @@ Unit 2
     Use the start/stop buttons to capture packets
     Sort through packets by clicking the column labels or using the search bar at the top
     arp (-a) - modifies internet address table
+    
+Unit 3
+  Lab 2 - Exploring broadcasting domain
+    Captured ICMP packets from Google and identified MAC addresses
