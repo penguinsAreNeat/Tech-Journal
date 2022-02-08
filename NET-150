@@ -22,5 +22,8 @@ Unit 2
     arp (-a) - modifies internet address table
     
 Unit 3
+  Lab 1 - ARP requests
+    View arp table with arp -a and delete it with arp -d on Windows (arp -n on Linux)
+    arp sends out a MAC address request based on IP for the LAN, and then waits for a response from a computer with that IP
   Lab 2 - Exploring broadcasting domain
     Captured ICMP packets from Google and identified MAC addresses
