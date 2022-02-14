@@ -27,3 +27,10 @@ Unit 3
     arp sends out a MAC address request based on IP for the LAN, and then waits for a response from a computer with that IP
   Lab 2 - Exploring broadcasting domain
     Captured ICMP packets from Google and identified MAC addresses
+    
+Unit 4
+  Lab 1 - Cisco packet routing
+    Set the gateway on a computer by going to config, settings
+    Set IP/subnet mask on a switch by going to config, [wire selection]
+    Enter simulation mode by clicking the labled button on the right
+    Use the edit filters button above simulation mode to filter the types of packets
