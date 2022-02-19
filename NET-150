@@ -14,8 +14,8 @@ Unit 1
 Unit 2
   Lab 1 - Using packet tracer
     Deploy hardware by selecting and dragging it from the bottom menu
-    Connect cables though the same manner, and clicking what you want to connect
-    To acess terminal, click the PC, Desktop, Terminak
+    Connect cables by slecting them from the cables submenu, and clicking what you want to connect [computer port and connection port]
+    To acess terminal, click the PC, Desktop, Terminal
   Lab 2 - Using WireShark
     Use the start/stop buttons to capture packets
     Sort through packets by clicking the column labels or using the search bar at the top
@@ -34,3 +34,15 @@ Unit 4
     Set IP/subnet mask on a switch by going to config, [wire selection]
     Enter simulation mode by clicking the labled button on the right
     Use the edit filters button above simulation mode to filter the types of packets
+  Lab 2 - ARP in Packet Tracer
+    TURN ON PORT INTERFACES WHEN CONFIGURING ROUTER CABLES
+    Hold the mouse over a device to view information
+    show mac-address-table - shows the MAC address table in a router
+    If router terminal looks like 'Switch>', enter 'enable' to enter admin mode
+    If router terminal looks like 'Swtich (config)#', enter 'exit' to return to admin mode
+  Lab 3 - Simple network packet tracing
+    Use simulation mode to simulate packets being sent from devices
+    Save router config by enabling Router - Config - Save NVRAM
+  
+Unit 5
+  Lab 1 - Simple routing
