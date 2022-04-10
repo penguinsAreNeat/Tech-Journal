@@ -87,4 +87,7 @@ Unit 11
       VLAN creations will need to be done across all switches to properly connect VLANs together
     To create a Access port, select the connection port on the switch and change the VLAN number to the desired one
     To create a Trunk port, select the connection port on the switch and change the Access field to Trunk (all VLAN fields can be left enabled)
-  Lab 2 -  
+  Lab 2 -  VLANs Part 2
+    A router needs to act as a default gateway to allow pings across subnets
+    After confgurating IP addr and connecting the router with a trunk cable, type "switchport trunk native vlan [number]", "switchport nonegotiate", and exit
+    
