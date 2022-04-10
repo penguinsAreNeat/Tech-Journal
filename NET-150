@@ -1,6 +1,7 @@
 Overview
-  (text) indicates a option for a command
-  [text] indicates required information to use the function
+  (text) indicates a option for a command or additional information
+  [text] indicates required information to use the function\
+  " " indicates a CLI input on a Cisco router
 
 Unit 1
   Lab 1 - Used cmd commands to find informaiton on local and remote servers
@@ -46,3 +47,44 @@ Unit 4
   
 Unit 5
   Lab 1 - Simple routing
+    Packet tracer has a filter menu for packet types in the right hand corner of simulation
+    
+Unit 6
+  Lab 2 - Subnetting
+    Subnets work by reserving a range of IP addresses for a subnetwork by splicing the host address into two parts
+      The subnet mask identifes which part is the network addr, and which is the host addr
+    This field can be configured under the IP address field for end devices (dotted decimal format)
+    As for all networks, first IP addr in a range is default gateway, last is boradcast addr
+
+Unit 7
+  Lab 2 - Subnetting in Packet Tracer
+    There is a option in Packet Tracer to show what port a cable is connected to
+ 
+Unit 8
+  Lab 1 - Tracing routes
+    tracert [IP or DNS addr] cmd command tracks the path a packet takes to a target desintation (traceroute in Linux)
+    
+Unit 9
+  Lab 1 - Static Routing
+    To create static routing paths, enter the CLI and enter config mode
+    If not in config mode, enter "enable" and "config terminal"
+    To create a route, type "ip route [network addr] [subnet mask] [serial connection on router]"
+      Note that this has to be done individlaully on each router
+    To test routes, leave config mode ("exit") and type "show ip route"
+  Lab 2 - Static routing
+    See above for how to create static paths
+    Remember to test routes with "show ip route"
+    
+Unit 10
+  Lab 1 - Understanding RIP
+    To enable RIP, enter config mode on the CLI
+    Type "router rip" then "version 2", then specify the directcly connected networks "network [ip addr]"
+      This must be manually done for all routers
+      
+Unit 11
+  Lab 1 - VLANs
+    To set up a switch VLAN on Packet Tracer, go to Config: VLAN database and create a VLAN number and name
+      VLAN creations will need to be done across all switches to properly connect VLANs together
+    To create a Access port, select the connection port on the switch and change the VLAN number to the desired one
+    To create a Trunk port, select the connection port on the switch and change the Access field to Trunk (all VLAN fields can be left enabled)
+  Lab 2 -  
