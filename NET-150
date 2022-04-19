@@ -2,6 +2,17 @@ Overview
   (text) indicates a option for a command or additional information
   [text] indicates required information to use the function\
   " " indicates a CLI input on a Cisco router
+  
+Base Knowledge
+  Basic Routing
+    Switches operate on OSI Layer 2, and use MAC addr. and ports
+    Routers (and some modern switches) operate on Layer 3 with IP addr.
+  Wireless Network Types
+    802.11a    5GHz          Up to 54Mbps
+    802.11b    2.4GHz        Up to 11Mbps
+    802.11g    2.4GHz        Up to 54Mbps
+    802.11n    2.4GHz/5GHz   Up to 600Mbps
+    802.11ac   2.4GHz/5GHz   Up to 1.3Gbps
 
 Unit 1
   Lab 1 - Used cmd commands to find informaiton on local and remote servers
@@ -85,8 +96,10 @@ Unit 11
   Lab 1 - VLANs
     To set up a switch VLAN on Packet Tracer, go to Config: VLAN database and create a VLAN number and name
       VLAN creations will need to be done across all switches to properly connect VLANs together
-    To create a Access port, select the connection port on the switch and change the VLAN number to the desired one
-    To create a Trunk port, select the connection port on the switch and change the Access field to Trunk (all VLAN fields can be left enabled)
+    Access ports are used for connecting end-devices to the network and can only be assigned to a single VLAN
+      To create a Access port, select the connection port on the switch and change the VLAN number to the desired one
+    Trunk ports carry multiple VLANs, allows for the VLANs to span across multiple switches.
+      To create a Trunk port, select the connection port on the switch and change the Access field to Trunk (all VLAN fields can be left enabled)
   Lab 2 -  VLANs Part 2
     A router needs to act as a default gateway to allow pings across subnets
     After confgurating IP addr and connecting the router with a trunk cable, type "switchport trunk native vlan [number]", "switchport nonegotiate", and exit
