@@ -1,0 +1,6 @@
+Lists
+  varName = []
+  varName = ["", ""]
+  
+  TypeError: string indices must be integers
+    For crying out loud, did you use a colon?
