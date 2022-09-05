@@ -1,6 +1,7 @@
 
 Week 1
   Lab 1 - System setup (Windows Server 2016, DHCP on CentOS, Firewall on FreeBSD, Windows 10)
+    Named and configured firewall networks (options 1 and 2 of main menu, FreeBSD)
     Creating a new administrative user, using lursmgr.msc then creating a new user and assigning them to the admin group
     Configuring the IPv4 address, by Network Center – Status – Properties – IPv4 Protocol
     Changing the computer name, by going to File Explorer – This PC – Properties – Change Settings
