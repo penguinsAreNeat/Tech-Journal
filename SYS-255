@@ -6,3 +6,13 @@ Week 1
     Configuring the IPv4 address, by Network Center – Status – Properties – IPv4 Protocol
     Changing the computer name, by going to File Explorer – This PC – Properties – Change Settings
 
+Week 2
+  Lab 2 - Windows Server, ADDS, DNS
+    Used Server Manager - Local Server Manager to setup network configuration
+    Installed ADDS via Server Manger - Manage - Add Roles and Features
+    Promoted the server to a domain controller
+    Adjust DNS settings via Server Menu - DNS Manager, then add the related DNS record
+    "A" records foward website names, "PTR" records foward IP names, "CNAME" records link seperate website names
+    Created new users and assigned them to groups
+    To lookup domains and use recursive searching in nslookup, type "set type=ns" after entering nslookup in cmd
+    
