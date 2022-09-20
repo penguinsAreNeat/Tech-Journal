@@ -24,3 +24,7 @@ Linux navigation
   cd - change directory
   mkdir - make directory
   cat - display contents of file(s)
+  cp source_file target_file - copy a file to new destination, -r to include subfolders
+  
+  useradd username - add user
+  passwd username - set password
