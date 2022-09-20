@@ -18,7 +18,11 @@ Week 2
 Week 3
   Lab 3 - Setting up CentOS7
     Fixed a highly problematic network error by swapping the network adapters on vSphere
-      Always make sure default network is on the primary adapter, do not leave it on adapter 2+  
+      Always make sure default network is on the primary adapter, do not leave it on adapter 2+
+    Networking setup - “nmtui” into the terminal
+      Use that application to select the primary network card
+      Open (show) ipv4 and input the address (include subnet), gateway, DNS, and domain
+      If needed, configure the hostname from the main menu
       
 Linux navigation
   cd - change directory
