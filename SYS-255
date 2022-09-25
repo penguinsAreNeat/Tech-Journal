@@ -25,7 +25,7 @@ Week 3
       If needed, configure the hostname from the main menu
 Week 4
   Lab 1 - Configuring DHCP on CentOS7
-    Configure DHCP on [text editor] /etc/dhcp/dhcpd.conf
+    Configure DHCP on sudo [text editor] /etc/dhcp/dhcpd.conf
       
 Linux navigation
   cd - change directory
