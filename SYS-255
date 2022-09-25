@@ -36,6 +36,8 @@ Linux navigation
   mkdir - make directory
   cat - display contents of file(s)
   cp source_file target_file - copy a file to new destination, -r to include subfolders
+  grep - search for a word/prhase, used with cat
+  | - output the return of the previous command into a new one, combining commands
   
   useradd username - add user
   passwd username - set password
