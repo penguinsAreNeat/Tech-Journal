@@ -15,6 +15,7 @@ Week 2
     "A" records foward website names, "PTR" records foward IP names, "CNAME" records link seperate website names
     Created new users and assigned them to groups
     To lookup domains and use recursive searching in nslookup, type "set type=ns" after entering nslookup in cmd
+    
 Week 3
   Lab 1 - Setting up CentOS7
     Fixed a highly problematic network error by swapping the network adapters on vSphere
@@ -23,6 +24,7 @@ Week 3
       Use that application to select the primary network card
       Open (show) ipv4 and input the address (include subnet), gateway, DNS, and domain
       If needed, configure the hostname from the main menu
+      
 Week 4
   Lab 1 - Configuring DHCP on CentOS7
     Configure DHCP on sudo [text editor] /etc/dhcp/dhcpd.conf
