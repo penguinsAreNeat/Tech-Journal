@@ -26,6 +26,8 @@ Week 3
 Week 4
   Lab 1 - Configuring DHCP on CentOS7
     Configure DHCP on sudo [text editor] /etc/dhcp/dhcpd.conf
+    DHCP related packets:
+      
       
 Linux navigation
   cd - change directory
