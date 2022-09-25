@@ -28,7 +28,13 @@ Week 3
 Week 4
   Lab 1 - Configuring DHCP on CentOS7
     Configure DHCP on sudo [text editor] /etc/dhcp/dhcpd.conf
-    DHCP related packets:
+    When downloading PuTTY, disable Enhanced Security Configuration
+    To start DHCP, "systemctl start DHCP", and swap "start" for "status" to check for errors
+    When setting up the firewall, use "--permanent" when applying permanent changes
+    DHCP related packets, source - https://learn.microsoft.com/en-us/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics
+      DCHPOFFER - UDP packet that offers a IP address
+      DHCPREQUEST - UDP packet that responds to a DHCP offer, confirming that the computer wants a IP address
+      DHCPACK - UDP packet that gives out a IP address in response to a DHCP request
       
       
 Linux navigation
@@ -41,3 +47,5 @@ Linux navigation
   
   useradd username - add user
   passwd username - set password
+  
+  Remeber to enable Daemons as a service to make them start automatically upon bootup
