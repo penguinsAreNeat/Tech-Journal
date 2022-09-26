@@ -39,7 +39,8 @@ Week 4
       
 Linux navigation
   cd - change directory
-  mkdir - make directory
+  mkdir name - make directory
+  rmdir name - removes empty directory
   cat - display contents of file(s)
   cp source_file target_file - copy a file to new destination, -r to include subfolders
   grep - search for a word/prhase, used with cat
