@@ -45,11 +45,13 @@ Linux navigation
   cp source_file target_file - copy a file to new destination, -r to include subfolders
   grep - search for a word/prhase, used with cat
   | - output the return of the previous command into a new one, combining commands
+  groups - outputs what groups you are in
   
   useradd username - add user
   passwd username - set password
   groupadd groupname - add group
   usermod -aG groupname username - add user to group
   gpasswd -d username groupname - remove user from group
+  chmod ### - sets permissions of file, replace # with sum of permissions (4 read, 2 is write, 1 is execute) in user - group - everyone order
   
   Remeber to enable Daemons as a service to make them start automatically upon bootup
