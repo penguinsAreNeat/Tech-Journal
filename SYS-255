@@ -48,5 +48,7 @@ Linux navigation
   useradd username - add user
   passwd username - set password
   groupadd groupname - add group
+  usermod -aG username groupname - add user to group
+  gpasswd -d username groupname - remove user from group
   
   Remeber to enable Daemons as a service to make them start automatically upon bootup
