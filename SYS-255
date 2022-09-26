@@ -35,7 +35,7 @@ Week 4
       DCHPOFFER - UDP packet that offers a IP address
       DHCPREQUEST - UDP packet that responds to a DHCP offer, confirming that the computer wants a IP address
       DHCPACK - UDP packet that gives out a IP address in response to a DHCP request
-     To enable/disable remote ssh root, access /etc/ssh/ssh_config and set PermitRootLogin to yes/no
+     To enable/disable remote ssh root, access /etc/ssh/ssh_config and set PermitRootLogin to yes/no (remember to restart ssh)
       
       
 Linux navigation
