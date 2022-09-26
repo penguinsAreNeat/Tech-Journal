@@ -47,5 +47,6 @@ Linux navigation
   
   useradd username - add user
   passwd username - set password
+  groupadd groupname - add group
   
   Remeber to enable Daemons as a service to make them start automatically upon bootup
