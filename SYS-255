@@ -16,7 +16,7 @@ Week 1
       Leave DNS server override on PPP/WAN
       RFC1918 Networks: uncheck "block private networks from entering WAN"
       Set root password
-   Testing - Pinging LAN and WAN from Firewall and Windows 10
+   Testing - Pinging LAN and WAN from Firewall and Windows 10, all successful
   Lab 1 - System setup (Windows Server 2016, DHCP on CentOS, Firewall on FreeBSD, Windows 10)
     Named and configured firewall networks (options 1 and 2 of main menu, FreeBSD)
     Creating a new administrative user, using lursmgr.msc then creating a new user and assigning them to the admin group
