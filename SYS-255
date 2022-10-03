@@ -34,7 +34,19 @@ Week 2
     Promote server to Domain Controller
       Create new forest, jonathan.local
       Add DSRM password
-    
+    DNS records
+      Open DNS Manager - Foward Lookup Zone - jonathan.local, new host (A or AAAA), wks01-jonathan, 10.0.5.2, check update PTR record
+      Reverse Lookup Zone, new zone for 10.0.5
+      Create a new PTR record from the A record of fw01-yourname and ad01-yourname by unchecking, applying checking the update PTR record check box, and re-applying fw01's properties(c/p from lab, ignore if there's already PTR records in reverse lookup)?
+    Domain Users
+      AD DS, Active Directory Users and Computers, add a new user, jonathan.local-adm, uncheck change password, add to domain admin group
+      Add new user jonathan.local as standard account
+    Windows 10 config
+      Set DNS to 10.0.5.5
+      Add PC to domain, same location as change PC name, domain jonathan, enter Domain Admin credentials
+    Testing
+      Check Active Directory Users and Computers to verify Windows 10 is there
+      Use nslookup on all devices to verify accurate DNS records (IP and hostname)
   Lab 1 - Windows Server, ADDS, DNS
     Used Server Manager - Local Server Manager to setup network configuration
     Installed ADDS via Server Manger - Manage - Add Roles and Features
