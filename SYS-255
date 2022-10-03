@@ -24,6 +24,13 @@ Week 1
     Changing the computer name, by going to File Explorer – This PC – Properties – Change Settings
 
 Week 2
+  Machine Setup - Windows Server
+    Set Network Adapter to LAN, set password
+      Allow PC to be discovered by other PCs on network
+      Set IP, DNS, and hostname
+    Installing ADDS
+      Server Manager - Manage - Add Roles and Features, check Active Directory Domain Services
+    
   Lab 1 - Windows Server, ADDS, DNS
     Used Server Manager - Local Server Manager to setup network configuration
     Installed ADDS via Server Manger - Manage - Add Roles and Features
