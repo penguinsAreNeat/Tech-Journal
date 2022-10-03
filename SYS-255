@@ -57,6 +57,7 @@ Week 2
     To lookup domains and use recursive searching in nslookup, type "set type=ns" after entering nslookup in cmd
     
 Week 3
+  Machine Setup - CentOS7 - DHCP
   Lab 1 - Setting up CentOS7
     Fixed a highly problematic network error by swapping the network adapters on vSphere
       Always make sure default network is on the primary adapter, do not leave it on adapter 2+
