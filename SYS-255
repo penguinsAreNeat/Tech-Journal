@@ -27,9 +27,13 @@ Week 2
   Machine Setup - Windows Server
     Set Network Adapter to LAN, set password
       Allow PC to be discovered by other PCs on network
-      Set IP, DNS, and hostname
+      Set IP, DNS (10.0.5.2, only pre-promotion), and hostname
     Installing ADDS
       Server Manager - Manage - Add Roles and Features, check Active Directory Domain Services
+      Choose the Restart Destination Server, check Include Management Tools if possible
+    Promote server to Domain Controller
+      Create new forest, jonathan.local
+      Add DSRM password
     
   Lab 1 - Windows Server, ADDS, DNS
     Used Server Manager - Local Server Manager to setup network configuration
