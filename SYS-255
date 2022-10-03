@@ -1,5 +1,22 @@
 
 Week 1
+  Machine Setup - Firewall
+    Cable wires in VMware, WAN then LAN
+    Assign interfaces (labled Reassign Interfaces, 1), check MAC address on NIC and VMware to check for errors
+      To assign interfaces, ignore VLANs, WAN should be em0, LAN should be em1, skip other options
+    Set IP Interfaces (2)
+      Select the WAN, do not use DHCP, /24 subnet, gateway is 10.0.17.103, use gateway as name server, no IPv6, no HTTP for GUI
+      Select the LAN, do not use DHCP, /24 subnet, IP is 10.0.5.2, no upstream gateway (hit enter), no DHCP, bypass IPv6, no LAN DHCP server, no revert to HTTP
+  Machine Setup - Windows 10
+    Name computer, file explorer - this PC - properties - change settings - rename PC
+    Add Admin account, lusrmgr.msc
+      name first.last-loc
+      Add account to admin group (Administrators)
+    Navigate to Firewall using Google
+      Leave DNS server override on PPP/WAN
+      RFC1918 Networks: uncheck "block private networks from entering WAN"
+      Set root password
+   Testing - Pinging LAN and WAN from Firewall and Windows 10
   Lab 1 - System setup (Windows Server 2016, DHCP on CentOS, Firewall on FreeBSD, Windows 10)
     Named and configured firewall networks (options 1 and 2 of main menu, FreeBSD)
     Creating a new administrative user, using lursmgr.msc then creating a new user and assigning them to the admin group
