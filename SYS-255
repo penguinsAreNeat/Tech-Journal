@@ -13,6 +13,7 @@ Week 1
       name first.last-loc
       Add account to admin group (Administrators)
     Navigate to Firewall using Google
+      Set IP/DNS address (set DNS to gateway if not setup)
       Leave DNS server override on PPP/WAN
       RFC1918 Networks: uncheck "block private networks from entering WAN"
       Set root password
