@@ -87,7 +87,22 @@ Week 5
 Week 6
   Assessment tools
     Network Diagram - https://drive.google.com/file/d/1EguGjE8VHpxitLRegILEDgCcFWPYsCWM/view?usp=sharing
-      
+Week 7
+  Lab 1 - File Server Setup on Windows Server Core
+    Used "sconfig" to setup hostname, Domain, network, and password (command spawns labeled prompts)
+    Downloaded File Server Management Tools (RSAT) to the Active Directory Server
+    Added File Server to known servers on Active Directory (right click All Servers in AD)
+    Added Security Group under folder, along with related users in Group Policy
+    Used command "netsh advfirewall firewall set rule group=”Remote File Server Resource Manager Management” new enable=yes" to open File Server for managing
+    Stated a File Share on the File Server, added Security Group to Full Control Permissions
+    Error: Cannot Access File Server, no RPC connection
+      Cannot view File Server on network
+      Insufficient permissions to test connection to file server as Administrator
+      Checked firewall rules on File Server
+      Checked firewall rules on Group policy
+      Allowed inbound network traffic dynamic RPC Firewall rule on Domain Group Policy (https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732839(v=ws.10)?redirectedfrom=MSDN)
+      Error not resolved
+    
 Linux navigation
   cd - change directory
   mkdir name - make directory
