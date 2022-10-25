@@ -101,7 +101,17 @@ Week 7
       Checked firewall rules on File Server
       Checked firewall rules on Group policy
       Allowed inbound network traffic dynamic RPC Firewall rule on Domain Group Policy (https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732839(v=ws.10)?redirectedfrom=MSDN)
-      Error not resolved
+      Error resolved on it's own after a day of waitng, unsure of cause
+
+Week 8
+  Lab 1 - Installing DHCP on Windows Server Core (File Server)
+    Run the following Powershell install scripts (replace IP addresses)
+      Install-WindowsFeature DHCP -IncludeManagementTools
+      Add-DhcpServerv4Scope -Name "Internal" -StartRange 192.168.0.10 -EndRange 192.168.0.250 -SubnetMask 255.255.255.0 -Description "Internal Network" 
+      Set-DhcpServerv4OptionValue -DNSServer 192.168.0.1 -DNSDomain demo.servercore.net -Router 192.168.0.254
+      Add-DhcpServerInDC -DNSName activeDirectoryServerName
+    Authorize DHCP Server on Active Directory
+    Install DHCP Management Tools Under Features, Remote Management on AD Server
     
 Linux navigation
   cd - change directory
