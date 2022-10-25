@@ -112,6 +112,8 @@ Week 8
       Add-DhcpServerInDC -DNSName activeDirectoryServerName
     Authorize DHCP Server on Active Directory
     Install DHCP Management Tools Under Features, Remote Management on AD Server
+  Lab 2 - Set up Web Server on Apache
+    Disable remote root login in ssh (etc/ssh/sshd_config - set PermitRootLogin to no)
     
 Linux navigation
   cd - change directory
