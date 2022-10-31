@@ -114,6 +114,7 @@ Week 8
     Install DHCP Management Tools Under Features, Remote Management on AD Server
   Lab 2 - Set up Web Server on Apache
     Disable remote root login in ssh (etc/ssh/sshd_config - set PermitRootLogin to no)
+    Resolved DNS issue by fowarding queries to 8.8.8.8 (DNS Manager - Right CLick Domain - Properties - Fowarding)
     
 Linux navigation
   cd - change directory
