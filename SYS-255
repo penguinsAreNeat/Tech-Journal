@@ -115,7 +115,15 @@ Week 8
   Lab 2 - Set up Web Server on Apache
     Disable remote root login in ssh (etc/ssh/sshd_config - set PermitRootLogin to no)
     Resolved DNS issue by fowarding queries to 8.8.8.8 (DNS Manager - Right CLick Domain - Properties - Fowarding)
-    
+    Linux Domain Join
+      Install realmd with "sudo yum install -y realmd samba samba-common oddjob oddjob-mkhomedir sssd"
+      Use the command "realm join --user=[your-domain-admin-username] [yourdomain.local]"
+      Test with command "realm list"
+    Apache Installation
+      Use "sudo yum install httpd"
+      Enable http and https on firewall (remember to use --permanent flag)
+        "firewall-cmd --permanent --zone=public --add-service=http"
+      
 Linux navigation
   cd - change directory
   mkdir name - make directory
