@@ -1,1 +1,3 @@
-
+Lab 00 - Enviorment Setup
+  Fun fact! It is possible to join a domain while specifiying a local Admin account, but it will not authenticate with Kerberos 
+    That is 2 hours of my life I will never get back
