@@ -7,6 +7,7 @@ Lab 00 - Enviorment Setup
 Assignment 02-1 - DHCP Installation on Active Directory
   Installed via server manager
   Changed Domain Administrator account to be a part of the Domain Admin group, not just local Admin
-    For wks01:
+    Server requried a restart for account change to take effect, created authorization problem when trying to connect DHCP server to AD server (they were still both on the same machine)
+  For wks01:
     Deleted existing DNS records
     Removed the static IP addrress
