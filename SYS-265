@@ -1,3 +1,12 @@
+Lab Enviorment:
+
 Lab 00 - Enviorment Setup
   Fun fact! It is possible to join a domain while specifiying a local Admin account, but it will not authenticate with Kerberos 
     That is 2 hours of my life I will never get back
+    
+Assignment 02-1 - DHCP Installation on Active Directory
+  Installed via server manager
+  Changed Domain Administrator account to be a part of the Domain Admin group, not just local Admin
+    For wks01:
+    Deleted existing DNS records
+    Removed the static IP addrress
