@@ -1,8 +1,24 @@
-Lab Enviorment:
+Lab Enviorment: vSphere vms
+  ad01 - Active Directory on Windows Server Core
+  fw01 - Firewall/gateway running on FreeBSD, coifigured with pfsense
+  mgmt01 - Server Manager 2019, also running DNS server
+  nmon01 - CentOS7
+  web01 - CentOS7
+  wks01 - Windows 10
 
 Lab 00 - Enviorment Setup
   Fun fact! It is possible to join a domain while specifiying a local Admin account, but it will not authenticate with Kerberos 
     That is 2 hours of my life I will never get back
+  Configured fw01 network, gateway, then finished using pfsense config
+  Set computer networks to use LAN instead of default WAN
+  Set up Domain on ad01
+    Joined mgmt01, wks01 to Domain
+  Added admin user to Windows Domain, CentOS computers
+  
+  Confusing terms:
+    Get-DnsServerResourceRecord - could not get command to display PTR records
+    Enumerate, in DNS context
+    RFC1918 Private Networks - found in pfsense config, not sure what this does
     
 Assignment 02-1 - DHCP Installation on Active Directory
   Installed via server manager
