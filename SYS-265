@@ -27,3 +27,17 @@ Assignment 02-1 - DHCP Installation on Active Directory
   For wks01:
     Deleted existing DNS records
     Removed the static IP addrress
+
+ Lab 02 - Network Management, SNMP
+  Enabled SNMP services on pfsense (pfsense webpage, services, SNMP (restart after config)) 
+  Installed "snmp-network-utils" and "net-snmp" to install a snmp server on web01, replaced config file with custom config file
+    Remeber to restart service and allow snmp port 161 through firewall (and --permanet tag!)
+  Installed snmp service on ad01, snmp remote admin tools on mgmt01 with Server Manager
+  Set ad01 to allow remote powershell sessions and remote computer managment (the latter needs the "Remote Event Log Managment" firewall rule group enabled)
+    Guide link for powershell sessions: https://www.howtogeek.com/117192/how-to-run-powershell-commands-on-remote-computers/
+  Sample snmp query line: snmpwalk -Os -c [Read Community String] -v2c [targer computer]
+    [RCS] is the RCS value entered into pfsense
+    
+  Reflection:
+    DNS problems requried that the domain name be specified as well as the computer name in cmd, unsure why
+    
