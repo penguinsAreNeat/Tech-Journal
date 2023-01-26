@@ -40,4 +40,6 @@ Assignment 02-1 - DHCP Installation on Active Directory
     
   Reflection:
     DNS problems requried that the domain name be specified as well as the computer name in cmd, unsure why
+    tcpdump - is this a built in packet capture function?
+    snmp command format - what does -v2c mean?
     
