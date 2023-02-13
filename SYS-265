@@ -45,3 +45,13 @@ Assignment 02-1 - DHCP Installation on Active Directory
     
  Lab 04 - Docker
   Set up a new VM using Ubuntu cloud server
+    Configured IP by using "ifconfig [interface name] [ip address] netmask [subnet mask]
+    Configured hostname wth "hostnamectl set-hostname [name]"
+    Added named sudo user (not wheel like in CentOS), disabled root ssh
+  Installed Docker using the following instructions: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+  Installed Wordpress container with the following guide: https://upcloud.com/resources/tutorials/wordpress-with-docker
+  
+  Docker commands:
+    version: prints installed version
+    run: creates a named container and runs it; is capeable of pulling resources from the web
+    images: shows the installed images 
