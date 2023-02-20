@@ -1,1 +1,1 @@
-mgmt01-jonathan
+hostname: mgmt01-jonathan
