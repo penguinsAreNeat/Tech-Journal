@@ -56,3 +56,5 @@ Assignment 02-1 - DHCP Installation on Active Directory
     run: creates a named container and runs it; is capeable of pulling resources from the web
     images: shows the installed images 
     ps: shows Docker containers
+    
+  When joining Centos7 to Windows AD, add the FQDN to the search domain in nmtui
