@@ -58,3 +58,8 @@ Assignment 02-1 - DHCP Installation on Active Directory
     ps: shows Docker containers
     
   When joining Centos7 to Windows AD, add the FQDN to the search domain in nmtui
+  
+  Lab 09 - AD Group Policy
+  
+  Powershell Commands
+    Create new OU - "NewADOrganizationalUnit -Name "[insert name]""
