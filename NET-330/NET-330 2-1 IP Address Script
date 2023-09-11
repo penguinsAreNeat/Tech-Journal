@@ -1,6 +1,0 @@
-#!/bin/bash
-ip addr | grep global | awk '{print $2}'
-
-#Sources: https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/
-#         https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
-
