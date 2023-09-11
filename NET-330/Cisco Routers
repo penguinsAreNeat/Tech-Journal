@@ -1,1 +1,27 @@
+Router Command Levels (Sourced from https://www.cisco.com/E-Learning/bulk/public/tac/cim/cib/using_cisco_ios_software/02_cisco_ios_hierarchy.htm#:~:text=There%20are%20five%20command%20modes,mode%2C%20and%20line%20configuration%20mode.)
+Router>	- User EXEC mode
+  Router#	- Privileged EXEC mode
+    Router(config)#	- Configuration mode (notice the # sign indicates this is accessible only at privileged EXEC mode)
+      Router(config-if)#	- Interface level within configuration mode
+      Router(config-router)#	- Routing engine level within configuration mode
+      Router(config-line)#	- Line level (vty, tty, async) within configuration mode
 
+Hierarchy commands, in order:
+enable
+config
+exit
+
+Useful commands:
+
+Multiple ports/VLAN
+(config) interface range FastEthernet 0/x-y (let's you configure multiple ports at one time)
+(config-if-range) switchport access vlan x (defines the vlan for all ports in the range)
+
+Setup
+Router(config-if) no shutdown (turns on port)
+Router(config) ip routing (turns on routing on multilayer switches)
+
+Configuration
+Router(config) interface FastEthernet0/0 (interface selection)
+Router(config) interface vlan 100 (brings you into vlan interface config mode)
+Router(config-if) ip address 10.25.100.1 255.255.255.0 (set the ip address and subnet)
