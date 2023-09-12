@@ -29,6 +29,14 @@ peerInfo="# ${address} 192.168.241.131:4282 ${pub} 8.8.8.8,1.1.1.1 1280 120 0.0.
 # 7: keeping connection alive for
 # 8: what traffic to be routed through VPN
 
+#Check for duplicate
+FILE = wg0.conf
+if test -f "$FILE"; then
+
+else
+  exit
+fi
+
 echo "${peerInfo}
 [Interface]
 Address = ${ServerAddress}
