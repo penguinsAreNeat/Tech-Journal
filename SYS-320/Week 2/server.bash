@@ -2,6 +2,49 @@
 #!/bin/bash
 
 # Storyline: Script to create a wireguard server
+echo "Test for class code, Run for student code"
+read -p "Enter option: " varname
+
+# Check if file exists, with a choice between example and student method
+if [ "$varname" == "Test" ]; then 
+  #echo "success"
+  #Example method
+
+  if [[ -f "wg0.conf" ]]
+  then 
+	  # Prompt if we need to overwrite the file
+    echo "The file wg0.conf already exists."
+	  echo -n "Do you want to overwrite it? [y|N]"
+	  read to_overwrite
+
+	  if [[ "${to_overwrite}" == "N" || "${to_overwrite}" == "" || "${to_overwrite}" == "n"  ]]
+	  then
+		  echo "Exiting..."
+		  exit 0
+	  elif [[ "${to_overwrite}" == "y" ]]
+	  then
+		  echo "Creating the wireguard configuration file..."
+	  # If they don't specify y/N then error
+	  else
+		  echo "Invalid value"
+		  exit 1
+	  fi
+  fi
+  
+elif [ "$varname" == "Run" ]; then 
+  #echo "other success"
+  #Student method
+
+  if test -f "wg0.conf"
+  then
+  read -p "The file wg0.conf aleady exists, do you want to overwrite it? [Y/N]" overwrite_choice
+  if [ "$overwrite_choice" == "Y" ]; then 
+  else exit 0     
+  fi
+  
+else echo "Typo/other error, please restart"
+fi
+
 # Create a private key
 p="$(wg genkey)"
 echo "${p}" > /etc/wireguard/server_private.key
@@ -28,14 +71,6 @@ peerInfo="# ${address} 192.168.241.131:4282 ${pub} 8.8.8.8,1.1.1.1 1280 120 0.0.
 # 6: determines the largest packet size allowed
 # 7: keeping connection alive for
 # 8: what traffic to be routed through VPN
-
-#Check for duplicate
-FILE = wg0.conf
-if test -f "$FILE"; then
-
-else
-  exit
-fi
 
 echo "${peerInfo}
 [Interface]
