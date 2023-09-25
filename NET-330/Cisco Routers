@@ -39,4 +39,7 @@ Router(config) interface FastEthernet0/0 (interface selection)
 Router(config) interface vlan 100 (brings you into vlan interface config mode)
 Router(config-if) ip address 10.25.100.1 255.255.255.0 (set the ip address and subnet FOR VLANS)
 
+Misc:
+VLAN 1 is shutdown by default
+
 DHCP:
