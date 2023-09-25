@@ -41,5 +41,6 @@ Router(config-if) ip address 10.25.100.1 255.255.255.0 (set the ip address and s
 
 Misc:
 VLAN 1 is shutdown by default
+CTRL + Shift + 6 will stop cmd output
 
 DHCP:
