@@ -13,6 +13,11 @@ exit
 
 Useful commands:
 
+Basic commands 
+  Abbreviated commands:
+interface FastEthernet 0/x
+  int fa 0/x
+
 Multiple ports/VLAN
 (config) interface range FastEthernet 0/x-y (let's you configure multiple ports at one time)
 (config-if-range) switchport access vlan x (defines the vlan for all ports in the range)
