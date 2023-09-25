@@ -24,8 +24,9 @@ Multiple ports/VLAN
 (config) vlan [number] #Adds VLAN
   (config-vlan) name [VLAN name] #Sets VLAN name
 (config) show vlan #Displays VLANs
-(config) switchport mode trunk
-(config) switchport mode access 
+(config-if) switchport mode trunk
+  (config-if) switchport trunk encapsulation dot1q #For the "Trunk encapsulation is Auto, cannot configure to trunk" error
+(config-if) switchport mode access 
 
 Setup
 Router(config-if) no shutdown (turns on port)
