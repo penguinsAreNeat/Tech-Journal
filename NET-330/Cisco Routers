@@ -16,6 +16,9 @@ Useful commands:
 Multiple ports/VLAN
 (config) interface range FastEthernet 0/x-y (let's you configure multiple ports at one time)
 (config-if-range) switchport access vlan x (defines the vlan for all ports in the range)
+(config) vlan [number] #Adds VLAN
+  (config-vlan) name [VLAN name] #Sets VLAN name
+(config) show vlan #Displays VLANs
 
 Setup
 Router(config-if) no shutdown (turns on port)
