@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Extract IPs from target file and create firewall ruleset
+
+#Regex IP getter
+wget https://raw.githubusercontent.com/botherder/targetedthreats/master/targetedthreats.csv -O /tmp/targetedthreats.csv
+egrep -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' targetedthreats.csv | sort -u | badIPs.txt
+
+#Create firewall ruleset
+
+for eachIP in $(cat badIPs.txt)
+do
+	echo "block in from $(eachIP) to any" | tee -a pdf.conf
+	echo "iptables -A INPUT -s $(eachIP) j- DROP" | tee -a badIPs.iptables	
+done
