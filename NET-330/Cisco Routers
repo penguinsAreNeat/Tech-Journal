@@ -44,3 +44,5 @@ VLAN 1 is shutdown by default
 CTRL + Shift + 6 will stop cmd output
 
 DHCP:
+
+DNS:
