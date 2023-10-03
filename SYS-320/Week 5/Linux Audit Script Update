@@ -1,1 +1,16 @@
+#!/bin/bash
+#Security Check Script
 
+testvar = ""
+
+# IP security
+# IPv4 Fowarding
+testvar = $(cat /proc/sys/net/ipv4/ip_forward)
+  if [$testvar = 1]
+    echo "enter sysctl -w net.ipv4.ip_forward=0 to disable IPv4 fowarding"
+  fi
+  
+# Permission security
+# stat -L -c "%a %G %U" FILE or DIRECTORY
+
+# Legacy "+" and UID 0 accounts
