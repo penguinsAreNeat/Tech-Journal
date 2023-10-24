@@ -29,3 +29,5 @@ if ($searchBool -eq "Y")
        { Get-EventLog -LogName $readLog -Newest 100 | Where-Object {$_.Message -match "$searchTerm"} | export-csv -Path "$folder\SecurityLogFiltered.csv"}
 }
 echo "Ending script"
+
+# Addendum: a percent sign can be used to use your directory, so a file can be saved as the same location as this script
