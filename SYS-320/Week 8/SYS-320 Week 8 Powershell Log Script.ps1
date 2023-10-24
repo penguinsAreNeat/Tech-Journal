@@ -25,7 +25,7 @@ if ($searchBool -eq "Y")
 
     # Check if user wants to save filtered output
     $printBool = Read-host -Prompt "Save output? [Y/N]"
-    if ($printBool -eq "y")
+    if ($printBool -eq "Y")
        { Get-EventLog -LogName $readLog -Newest 100 | Where-Object {$_.Message -match "$searchTerm"} | export-csv -Path "$folder\SecurityLogFiltered.csv"}
 }
 echo "Ending script"
