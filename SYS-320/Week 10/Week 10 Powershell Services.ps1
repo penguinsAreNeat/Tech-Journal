@@ -13,6 +13,7 @@ function Show-Menu
     Write-Host “Q: Enter ‘quit’ to quit.”
 }
 
+# Array with user options
 $myarray = @("running","stopped","all")
 
 do
@@ -28,14 +29,20 @@ do
             }
 
             '2'{
+                # User prompt and read choice variable
                 $userChoice = Read-host -Prompt "What service filter would you like? [running, stopped, all]: "
 
+                # List Running Processes
                 if ($userChoice -eq $myarray[0]) {
                     Get-Service | Where-Object {$_.Status -eq "Running"}
                 }
+
+                # List Stopped Processes
                 elseif ($userChoice -eq $myarray[1]) {
                     Get-Service | Where-Object {$_.Status -eq "Stopped"}
                 }
+
+                # List All Processes
                 elseif ($userChoice -eq $myarray[2]) {
                     Get-Service
                 }
@@ -47,6 +54,7 @@ do
             'quit'{ # Option to quit loop, located at the end of the menu loop
             }
 
+            # Invalid option catch
             default {
                  "Please choose a valid option `n"
             }
