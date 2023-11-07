@@ -13,7 +13,7 @@ function Show-Menu
     Write-Host “Q: Enter ‘quit’ to quit.”
 }
 
-
+$myarray = @("running","stopped","all")
 
 do
 {
@@ -30,13 +30,13 @@ do
             '2'{
                 $userChoice = Read-host -Prompt "What service filter would you like? [running, stopped, all]: "
 
-                if ($userChoice -eq "running") {
+                if ($userChoice -eq $myarray[0]) {
                     Get-Service | Where-Object {$_.Status -eq "Running"}
                 }
-                elseif ($userChoice -eq "stopped") {
+                elseif ($userChoice -eq $myarray[1]) {
                     Get-Service | Where-Object {$_.Status -eq "Stopped"}
                 }
-                elseif ($userChoice -eq "all") {
+                elseif ($userChoice -eq $myarray[2]) {
                     Get-Service
                 }
                 else { Write-Host "Invalid option, try again" }
