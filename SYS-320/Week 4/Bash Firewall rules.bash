@@ -62,7 +62,7 @@ do
 		eachInbadIPs "block in from" "to any" | tee -a pf.conf
 
 	elif [[ $UserInput == "P" ]] || [[ $UserInput == "ParseCisco" ]]; then
-		wget https://raw.githubusercontent.com/botherder/targetedthreats/master/targetedthreats.csv -O /tmp/targetedthreats.cs
+		wget https://raw.githubusercontent.com/botherder/targetedthreats/master/targetedthreats.csv -O /tmp/targetedthreats.csv
 		awk '/domain/ {print}' temp/targetedthreats.csv | awk -F \" '{print $4}' | sort -u > threat.txt
 		echo 'class-map match-any BAD_URLS' | tee ciscothreats.txt
 		for eachip in $(cat threats.txt)
