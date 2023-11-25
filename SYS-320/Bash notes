@@ -1,1 +1,15 @@
-Text
+Variables
+  Created by
+
+If Statements
+  [] indicates, [[]], insicates
+  'then' is required after each statement
+  elif [] - else if
+  else - happens if no match is made
+
+Switch case
+
+echo
+
+read
+  reads a line inputted by the user
