@@ -65,7 +65,7 @@ do
 		wget https://raw.githubusercontent.com/botherder/targetedthreats/master/targetedthreats.csv -O /tmp/targetedthreats.csv
 		awk '/domain/ {print}' temp/targetedthreats.csv | awk -F \" '{print $4}' | sort -u > threat.txt
 		echo 'class-map match-any BAD_URLS' | tee ciscothreats.txt
-		for eachip in $(cat threats.txt)
+		for eachip in $(cat threat.txt)
 			echo "match protocol http host \"${eachip}\"" | tee -a ciscothreats.txt
 		done
 		rm threat.txt
