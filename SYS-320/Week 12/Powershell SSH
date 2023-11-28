@@ -1,0 +1,61 @@
+# Set target
+$SSHip = read-host -Prompt "Enter the target IP address: "
+
+# Connect to server
+New-SSHSession -ComputerName $SSHip -force -Credential (Get-Credential jon.penguin26@gmail.com)
+
+# List SSH commands
+# Get-Command -Module Posh-SSH
+
+while ($True) {
+
+    Write-Output "====== SSH Script ======"
+    Write-Output "1: Run a SSH command"
+    Write-Output "2: Transfer a file with SCP `n"
+
+    # Add prompt to run commands
+    $choice = read-host -Prompt "Enter choice, or 'q' to exit"
+    switch ($choice){
+
+        1 {
+            # Run SSH command
+            $command = read-host -Prompt "Enter command"
+            Invoke-SSHCommand -index 0 $command
+        }
+
+        2 {
+            # Set file targets
+            $SCPTarget = read-host "Enter the SCP file target"
+            $SCPLocal = read-host "Enter the local file or destination"
+            
+            $choiceSCP = read-host "Would you like to (1) upload or (2) download a file? "
+
+            switch ($choiceSCP) {
+
+                1 {
+                    Send-PowerShellServerFile -Server YourServer -RemoteFile $SCPTarget -LocalFile $SCPLocal
+                }
+
+                2 {
+                    Get-PowerShellServerFile -Server YourServer -RemoteFile $SCPTarget -LocalFile $SCPLocal
+                }
+
+                q {
+                    break
+                }
+
+            }
+        }
+
+        q { 
+            exit
+        }
+
+        
+    }
+}
+
+# Get-SHSession
+# Remove-SSHSession
+
+#Set-SCPFile -Computername $SSHip -Credential (Get-Credential sys320) -Remotepath 'path' -LocalFile 'text.txt'
