@@ -11,6 +11,7 @@ foreach ($i in $drop_urls) {
     $file_name = $temp[-1]
     # Uses last element in array for filename
 
+# Download files if they do not exist, otherwise ignore
     if (Test-Path $file_name) {
         continue
     }
@@ -27,13 +28,13 @@ $input_paths = @('.\compromised-ips.txt','.\emerging-botcc.rules')
 # Extract IP addresses
 $regex_drop = '\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b'
 
-# Append IP addresses
+# Place extracted ip addresses in "ips-bad.tmp"
 select-string -Path $input_paths -Pattern $regex_drop | `
 ForEach-Object { $_.Matches } | `
 ForEach-Object { $_.Value } | Sort-Object | Get-Unique | `
 Out-File -FilePath "ips-bad.tmp"
 
-# File created function
+# Function to show file creation
 function Firewall-Created {
 
     param ($firewallType, $firewallName)
@@ -50,6 +51,8 @@ Write-Host 'Press "M" for a Mac ruleset'
 
 $userChoice = Read-Host -p "What type of ruleset would you like? [I/W/M]"
 switch ($userChoice) {
+
+	# IPTables firewall ruleset
     'I' {
         # Convert to IPTables syntax
         # iptables -A INPUT -s IP -j DROP
@@ -58,17 +61,18 @@ switch ($userChoice) {
         Firewall-Created -firewallType "IPTables" -firewallName "iptables.bash"
     }
 
+	# Windows netsh firewall ruleset
     'W' {
-        # Windows syntax
         ForEach ($i in Get-Content ".\ips-bad.tmp") {
            Write-Output "netsh advfirewall firewall add rule name=`"BLOCK IP ADDRESS - $i`" dir=in action=block remoteip=$i" | ` 
            Out-File -FilePath "iptables.netsh" -Append
         }
         Firewall-Created -firewallType "Windows" -firewallName "iptables.netsh"        
     }
-       
+
+       # Mac firewall ruleset
     'M' {
-        # Mac syntax
+       # Firewall header that is required in Mac firewalls
         Write-Output '
 srcub-anchor "com.apple/*"
 nat-anchor "com.apple/*"
