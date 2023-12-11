@@ -7,13 +7,10 @@ Router>	- User EXEC mode
       Router(config-line)#	- Line level (vty, tty, async) within configuration mode
 
 Hierarchy commands, in order:
-enable
-config
-exit
-
-Useful commands:
-
-add something for ip-helper-address
+enable - enters privledged mode mode
+config - enters config mode
+exit - descendes one mode
+end - returns to privledged more
 
 Basic commands 
   Abbreviated commands:
