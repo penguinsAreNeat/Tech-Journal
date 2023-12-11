@@ -23,9 +23,9 @@ interface FastEthernet 0/x
 Multiple ports/VLAN
 (config) interface range FastEthernet 0/x-y (let's you configure multiple ports at one time)
 (config-if-range) switchport access vlan x (defines the vlan for all ports in the range)
-(config) vlan [number] #Adds VLAN
-  (config-vlan) name [VLAN name] #Sets VLAN name
-(config) show vlan #Displays VLANs
+(config) vlan [number] (Adds VLAN)
+  (config-vlan) name [VLAN name] (Sets VLAN name)
+(config) show vlan (Displays VLANs)
 (config-if) switchport mode trunk
   (config-if) switchport trunk encapsulation dot1q #For the "Trunk encapsulation is Auto, cannot configure to trunk" error
 (config-if) switchport mode access 
@@ -44,7 +44,17 @@ VLAN 1 is shutdown by default
 CTRL + Shift + 6 will stop cmd output
 
 DHCP:
-
-DNS:
+Enable DHCP on server and use GUI to set paramaters, including VLANs
+For DHCP relay, enter "ip helper-address [DHCP server IP]" on each server
 
 NAT:
+Interface with inside port and assign it "ip nat inside"
+Interface with outside port and assign it "ip nat outside"
+Create translation rule "ip nat inside source static [inside IP] [outside "new" IP]"
+
+PAT:
+Define inside and outdside interfaces (see NAT)
+Set pool size "ip nat pool [pool name] [range 1] [range 2] netmask [netmask range]"
+Permit which IPs can use the pool "access-list [AL number] permit [IP number] [Subnet mask]
+Allow [AL number] to access the pool "ip nat inside source list [AL number] pool [pool name] overload"
+debug: Router# "sh ip nat"
