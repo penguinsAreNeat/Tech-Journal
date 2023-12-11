@@ -63,6 +63,7 @@ Manually set peers and the process numbers, and the routers will handle the rest
 "network [IP network] [wildcard mask] area [area number] 
 Process number is used for differentiating multiple processes on routers, default 1 will work for single instance
 Area number must be consistent with the process number on each router to create handshakes, default 0 will for single instance
+Use "no switchport" on layer 3 routers to set up IP routing/config
 debug: sh ip route
 
 BGP:
