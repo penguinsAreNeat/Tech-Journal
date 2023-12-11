@@ -80,6 +80,7 @@ Advertise internal networks: "network [internal IP] mask [subnet mask]"
 debug: sh ip bgp
 
 Access Lists:
+ACLs must be above 100
 Some fields can be replaced with "any"
 Standard: "ip access-list standard [ACL number] (These can be applied to incoming or outgoing traffic on interfaces)
   Name: "ip access-list standard [ACL name]
@@ -94,3 +95,30 @@ Extended: "ip access-list extended [ACL number]
 debug: sh ip access-lists
 
 IPSEC:
+Make sure to apply default routes
+Repeat the following steps for both routers
+  (config) "access-list [ACL number] permit ip [source IP] [source wildmask] [destination IP] [destination wildmask]" (wildmask short for wildcard mask)
+  (config-isakmp) "crypto isakmp policy [policy number]"
+  (config-isakmp) "encryption aes 256"
+  (config-isakmp) "authentication pre-share"
+  (config-isakmp) "group [DH method]" (Highest DH method in packet tracer is 5, 14+ is the norm for production enviorments)
+  (config) "crypto isakmp key [key] address [target IP]"
+  (config) "crypto ipsec transform-set [VPN name] esp-aes esp-sha-hmac"
+  (config) "crypto map [VPN name] [policy number] ipsec-isakmp"
+  (config-crypto-map) "description [description]" (Optional but recommended)
+  (config-crypto-map) "set peer [target IP]"
+  (config-crypto-map) "set transform-set [VPN name]"
+  (config-crypto-map) "match address [ACL number]"
+  (config-if) "crypto map [VPN name]" (Apply to outgoing interface)
+debug: "sh crypto ipsec sa"
+  
+IPv6:
+Format for IPv6 is "x:x:x:x::/64"
+Autoconfig in DHCP is ideal for this, as it does not need DHCP (set up prefix beforehand)
+Name prefix with (config) "ipv6 general-prefix [prefix name] [ipv6 prefix]"
+Assign address with "ipv6 address [IPv6 address]" (see above format)
+Enable unicast with "ipv6 unicast-routing"
+Set EUI-64 address with "ipv6 address x.x.x.x::/64 eui-64" (insert prefix in x)
+IPv6 RIP: (config) "ipv6 rip process [process number] enable" (process number cannot be 1)
+debug: sh ipv6 brief
+debug: sh ipv6 route
