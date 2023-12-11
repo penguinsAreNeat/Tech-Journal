@@ -58,3 +58,14 @@ Set pool size "ip nat pool [pool name] [range 1] [range 2] netmask [netmask rang
 Permit which IPs can use the pool "access-list [AL number] permit [IP number] [Subnet mask]
 Allow [AL number] to access the pool "ip nat inside source list [AL number] pool [pool name] overload"
 debug: Router# "sh ip nat"
+
+OSPF:
+Manually set peers and the process numbers, and the routers will handle the rest
+(config-it) "router OSPF [proccess number]"
+"network [IP network] [wildcard mask] area [area number] 
+Process number is used for differentiating multiple processes on routers, default 1 will work for single instance
+Area number must be consistent with the process number on each router to create handshakes, default 0 will for single instance
+debug: sh ip route
+
+BGP:
+This is not something you should be touching unless you are a ISP (that's a warning of annoyance)
