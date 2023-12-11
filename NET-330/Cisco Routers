@@ -42,6 +42,7 @@ Router(config-if) ip address 10.25.100.1 255.255.255.0 (set the ip address and s
 Misc:
 VLAN 1 is shutdown by default
 CTRL + Shift + 6 will stop cmd output
+Wildcard masks are the inverse of subnet masks, i.e. 255.255.255.0 instead of 0.0.0.255
 
 DHCP:
 Enable DHCP on server and use GUI to set paramaters, including VLANs
@@ -77,3 +78,19 @@ Setup: "router bgp [AS number] (AS number is unique to the router/orginization)
 Set peers: "neighbor [IP address] remote-as [peer AS number]
 Advertise internal networks: "network [internal IP] mask [subnet mask]"
 debug: sh ip bgp
+
+Access Lists:
+Some fields can be replaced with "any"
+Standard: "ip access-list standard [ACL number] (These can be applied to incoming or outgoing traffic on interfaces)
+  Name: "ip access-list standard [ACL name]
+  Entries: ["permit or "deny"] [source IP] [wildcard mask] (Don't forget about implicit deny, "permit any" will allow any)
+  Apply to interface with: "ip access-group [ACL number] ["in" or "out"] (short for inbound and outbound)
+  Deletion: no ip access-list standard [ACL number]
+Extended: "ip access-list extended [ACL number]
+  Fields can optionally end with "eq [port number]" to specify a port number for traffic
+  Entry tcp/udp: ["permit" or "deny] ["tcp" or "udp"] [IP address 1] [IP address 2] host [IP address 3] 
+  Entry ip: ["permit" or "deny"] ip [IP address 1] [IP address 2] [IP address 3] [IP address 4]
+  Apply to interface with: "ip access-group [ACL number] ["in" or "out"]
+debug: sh ip access-lists
+
+IPSEC:
