@@ -69,3 +69,11 @@ debug: sh ip route
 
 BGP:
 This is not something you should be touching unless you are a ISP (that's a warning of annoyance)
+OSPF must be set up beforehand
+Make sure to set the default route to ISP/main (ip route [destination] [subnet mask] [next hop IP address])
+"default-information originate"
+"redistribute OSPF [process number]
+Setup: "router bgp [AS number] (AS number is unique to the router/orginization)
+Set peers: "neighbor [IP address] remote-as [peer AS number]
+Advertise internal networks: "network [internal IP] mask [subnet mask]"
+debug: sh ip bgp
