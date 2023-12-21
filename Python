@@ -3,12 +3,22 @@ Var Types
   boolean
   string
 
+Operands
+  and
+  or
+  not
+  ==
+  !=
+  >=
+  <=
+  Extended:
+    ^ - XOR
+
 If Statements
   if a = b: 
   elif a = b:
   else:
     pass - skip statement
-    Can use operands
 
 Lists
   varName = []
