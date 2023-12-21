@@ -1,7 +1,15 @@
 Var Types
   int
+    float
+    complex
   boolean
-  string
+  string - technically arrays
+  list
+    tuple
+    range
+  dict
+  set
+  frozenset
 
 Operands
   and
@@ -17,11 +25,42 @@ Operands
     bool - converts to boolean value
       # Negative numbers are considered True
 
+Strings
+  str[i] - returns character at i
+  str[i:j] - return characters from i to j
+  str[:j] - return characters from start to j
+  str[i:] - return characters from i to end
+  str[-i:] - start i from end of string
+
+  len(str) - returns length int of string
+  str in txt - boolean if str exists in txt
+
+  str.upper() - return string in uppercase
+  str.lower() - return string in lowercase
+  str.strip() - remove whitespace at ends
+  str.replace("x", "y") - replace all instances of x with y
+  str.split("x") - split string in all places with the same string as x, return as array
+
+Arrays
+  array[i] - return element at i
+
 If Statements
   if a = b: 
   elif a = b:
   else:
     pass - skip statement
+
+For Loop
+  for x in array:
+  for x in str:
+  for x in range(int):
+  else:
+  # Triggers at end of loop
+
+Statement options
+  pass - skip
+  continue - skip
+  break - end
 
 Lists
   varName = []
@@ -34,3 +73,6 @@ Methods
   def name(input1, input_etc)
     return - to return variable
     pass - skip method
+
+Misc:
+  str * int is a valid operation
