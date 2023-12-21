@@ -37,8 +37,25 @@ Strings
 Lists - ordered and changeable list of elements
   # Can be accessed with MIAO
   li.append(x) - add element to list
+  li.extend(arr2) - append arr2 to li, works for tuples, dicts, and sets
   li.insert(i, x) - add element i at x
-  li.extend(li2) - append li2 to li, works for tuples, dicts, and sets
+
+  li[i] = x - change element i to x
+  li[i:j] = x - change range of elements i to j to new element x
+  li[i:j] = arr2 - change range of elemnts i to j to new array
+  
+  li.remove(x) - remove x from list
+  li.pop(i) - remove element at index i, or the last item if there is no input
+  del li - remove list
+  del li[i] - remove element at index i
+  clear li - empties list
+
+  List comprehension - witchcraft
+
+  li.sort() - needs further testing
+  li2 = li.copy - copies li into li2
+  li.count(x) - returns how many times x appears in li
+  li.reverse - reverses list
 
 Mutiple index access options (MIAO)
   str enabled
