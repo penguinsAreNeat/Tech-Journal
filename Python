@@ -1,6 +1,23 @@
+Var Types
+  int
+  boolean
+  string
+
+If Statements
+  if a = b: 
+  elif a = b:
+  else:
+    pass - skip statement
+    Can use operands
+
 Lists
   varName = []
   varName = ["", ""]
   
   TypeError: string indices must be integers
     For crying out loud, did you use a colon?
+
+Methods
+  def name(input1, input_etc)
+    return - to return variable
+    pass - skip method
