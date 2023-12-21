@@ -14,6 +14,8 @@ Operands
   Extended:
     ^ - XOR
     abs() - absolute value
+    bool - converts to boolean value
+      # Negative numbers are considered True
 
 If Statements
   if a = b: 
@@ -26,7 +28,7 @@ Lists
   varName = ["", ""]
   
   TypeError: string indices must be integers
-    For crying out loud, did you use a colon?
+    # For crying out loud, did you use a colon?
 
 Methods
   def name(input1, input_etc)
