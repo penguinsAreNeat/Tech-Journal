@@ -26,14 +26,7 @@ Operands
       # Negative numbers are considered True
 
 Strings
-  str[i] - returns character at i
-  str[i:j] - return characters from i to j
-  str[:j] - return characters from start to j
-  str[i:] - return characters from i to end
-  str[-i:] - start i from end of string
-
-  len(str) - returns length int of string
-  str in txt - boolean if str exists in txt
+  # Can be accessed with MIAO
 
   str.upper() - return string in uppercase
   str.lower() - return string in lowercase
@@ -41,8 +34,24 @@ Strings
   str.replace("x", "y") - replace all instances of x with y
   str.split("x") - split string in all places with the same string as x, return as array
 
-Arrays
-  array[i] - return element at i
+Lists - ordered and changeable list of elements
+  # Can be accessed with MIAO
+  li.append(x) - add element to list
+  li.insert(i, x) - add element i at x
+  li.extend(li2) - append li2 to li, works for tuples, dicts, and sets
+
+Mutiple index access options (MIAO)
+  str enabled
+  list enabled
+
+  x[i] - returns character at i
+  x[i:j] - return characters from i to j
+  x[:j] - return characters from start to j
+  x[i:] - return characters from i to end
+  x[-i:] - start i from end of x
+
+  len(x) - returns length int of x
+  x in txt - boolean if x exists in txt
 
 If Statements
   if a = b: 
@@ -62,9 +71,9 @@ Statement options
   continue - skip
   break - end
 
-Lists
-  varName = []
-  varName = ["", ""]
+Lists - Ordered and changeable set of items
+  varName = [] - int
+  varName = ["", ""] - str
   
   TypeError: string indices must be integers
     # For crying out loud, did you use a colon?
