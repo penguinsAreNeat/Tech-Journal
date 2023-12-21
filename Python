@@ -13,6 +13,7 @@ Operands
   <=
   Extended:
     ^ - XOR
+    abs() - absolute value
 
 If Statements
   if a = b: 
