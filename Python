@@ -7,9 +7,9 @@ Var Types
   list
     tuple
     range
-  dict
-  set
-  frozenset
+    dict
+    set
+      frozenset
 
 Operands
   and
