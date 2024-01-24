@@ -3,3 +3,10 @@ adduser
 usermod -aG
 hostnamectl set-hostname
 set Linux ip with nmtui
+
+vyos config:
+  configure
+  set sytem-hostname [hostname]
+  commit
+  save
+  exit
