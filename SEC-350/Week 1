@@ -6,7 +6,7 @@ set Linux ip with nmtui
 
 vyos config:
   configure
-  set sytem-hostname [hostname]
+  set sytem host-name [hostname]
   commit
   save
   exit
