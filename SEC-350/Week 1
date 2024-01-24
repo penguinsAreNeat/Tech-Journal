@@ -2,3 +2,4 @@ passwd
 adduser
 usermod -aG
 hostnamectl set-hostname
+set Linux ip with nmtui
