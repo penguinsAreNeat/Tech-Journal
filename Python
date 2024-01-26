@@ -87,6 +87,7 @@ Statement options
   pass - skip
   continue - skip
   break - end
+  range([start int], [end int], [step int])
 
 Lists - Ordered and changeable set of items
   varName = [] - int
