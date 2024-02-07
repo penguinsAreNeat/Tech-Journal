@@ -10,3 +10,5 @@ vyos config:
   commit
   save
   exit
+
+firewall-cmd --list-all
