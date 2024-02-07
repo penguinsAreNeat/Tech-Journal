@@ -12,3 +12,5 @@ vyos config:
   exit
 
 firewall-cmd --list-all
+
+Linux IP routes are finicky, recommend using CLI instead of GUI due to inconsistent updating
