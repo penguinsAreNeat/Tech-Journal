@@ -1,1 +1,13 @@
+Rsyslog host - install with yun/apt
+  Restart program after making changes
+  Allow traffic from TCP/UDP 514
+  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception
+    Test - netstat -tupan | grep 514, should show Listen labels on port 514
 
+Target
+  Create [name].conf file in /etc/rsyslog.d/
+
+  Config file
+    user.notice @[host IPv4] - basic information
+  Test - tail -f /var/log/messages on host
+  
