@@ -13,5 +13,6 @@ Task:
   Add more time detail to rsyslog reports (web01, log01)
 
 See Rsyslog notes for config
+Rsyslog testing: logger -t test [text]
 
 Lab observations:
