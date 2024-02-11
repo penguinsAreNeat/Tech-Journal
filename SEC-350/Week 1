@@ -1,3 +1,22 @@
+Active networks:
+  WAN
+  DMZ
+  LAN
 
+Active machines:
+  rw01 (WAN) - Ubuntu, exterior computer
+  fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
+  web01 (DMZ) - CentOS7, hosts company website
+  log01 (DMZ) - CentOS7, handles log information
 
+Task: 
+  Network setup of rw01, fw01, web01, log01
+  NAT setup on fw01 to allow rw01 to access DMZ
+  Set up basic Apache on web01
+  Setup of rsyslog host log01 and target web01
+
+See Linux notes for basic setup configurations
+See Rsyslog/VyOS notes for relevant details
+
+Lab observations:
 Linux IP routes are finicky, recommend using CLI instead of GUI due to inconsistent updating
