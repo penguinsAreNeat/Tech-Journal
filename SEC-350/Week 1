@@ -1,11 +1,3 @@
-passwd
-adduser
-usermod -aG
-hostnamectl set-hostname
-set Linux ip with nmtui
 
-
-
-firewall-cmd --list-all
 
 Linux IP routes are finicky, recommend using CLI instead of GUI due to inconsistent updating
