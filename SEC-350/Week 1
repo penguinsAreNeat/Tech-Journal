@@ -4,12 +4,7 @@ usermod -aG
 hostnamectl set-hostname
 set Linux ip with nmtui
 
-vyos config:
-  configure
-  set sytem host-name [hostname]
-  commit
-  save
-  exit
+
 
 firewall-cmd --list-all
 
