@@ -10,6 +10,8 @@ Active machines:
   log01 (DMZ) - CentOS7, handles log information
 
 Task: 
-  Add more time detail to rsyslog reports
+  Add more time detail to rsyslog reports (web01, log01)
 
+See Rsyslog notes for config
 
+Lab observations:
