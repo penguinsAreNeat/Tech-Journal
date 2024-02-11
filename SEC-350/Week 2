@@ -1,1 +1,15 @@
+Active networks:
+  WAN
+  DMZ
+  LAN
+
+Active machines:
+  rw01 (WAN) - Ubuntu, exterior computer
+  fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
+  web01 (DMZ) - CentOS7, hosts company website
+  log01 (DMZ) - CentOS7, handles log information
+
+Task: 
+  Add more time detail to rsyslog reports
+
 
