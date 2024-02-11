@@ -1,9 +1,13 @@
-passwd
-adduser
-usermod -aG
-hostnamectl set-hostname
-set Linux ip with nmtui
+Users:
+  adduser [user]
+  passwd [user]
+  usermod -aG sudo [user] - replace sudo with wheel for CentOS7
 
+Networking
+  hostnamectl set-hostname
+  nmtui - terminal IP GUI and hostname setter
 
-
-firewall-cmd --list-all
+Firewall
+  ifconfig
+  firewall-cmd --list-all
+  firewall-cmd --zone=public --permanent --add-port=[port]/(tcp/udp)
