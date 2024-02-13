@@ -1,13 +1,20 @@
-Rsyslog host - install with yun/apt
-  Restart program after making changes
-  Allow traffic from TCP/UDP 514
-  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception
+Rsyslog host setup - desinged for CentOS7, see Other for different operating system  
+  Install with yum install rsyslog
+  Restart program after making changes (systemctl enable, restart)
+  Allow traffic from TCP/UDP 514 in firewall
+
+  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception" in the /etc/rsyslog.conf file
+    Messages will be sent to /var/log/syslog by default
+    To enable high-precision timestamps, uncomment the "Action File Default Template" in the Global Directives section
     Test - netstat -tupan | grep 514, should show Listen labels on port 514
 
-Target
+Target computer
   Create [name].conf file in /etc/rsyslog.d/
 
   Config file
     user.notice @[host IPv4] - basic information
   Test - tail -f /var/log/messages on host
-  
+
+Other operating system notes
+  Ubuntu - install with apt-get (apt-get install rsyslog)
+  Rocky Linux - install with dnf (dnf install rsyslog)
