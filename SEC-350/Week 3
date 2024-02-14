@@ -13,6 +13,7 @@ Active machines:
   fw-mgmt (LAN/MGMT) - VyOS firewall between LAN and MGMT
   mgmt01 (LAN) - Ubuntu
   mgmt02 (MGMT) - Windows Server 2016
+  wazuh (MGMT) - Ubuntu
 
 Task: 
   Initalize wks01, fw-mgmt, mgmt02
@@ -21,3 +22,5 @@ Task:
 Netplan notes:
 
 Lab observations:
+  Misconfigured IP on mgmt01 caused issues
+  Inconsistent connection seen on wazuh
