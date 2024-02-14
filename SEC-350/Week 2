@@ -20,7 +20,7 @@ See Rsyslog notes for config
 Rsyslog testing: logger -t test [text]
 
 SSH configuration, in order:
-  ssh-kgen - generates keys, saved by default to /home/[user]/.ssh/id_rsa
+  ssh-kgen - generates keys, saved by default to /home/[user]/.ssh
     It is reccommended that you use a passphrase you remember
   ssh-copy-id [user]@[target IPv4] - copies key to target computer
 
