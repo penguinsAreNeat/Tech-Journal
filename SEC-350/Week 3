@@ -23,5 +23,4 @@ Netplan notes:
 
 Lab observations:
   Misconfigured IP (overlap) bewteen mgmt01 and fw-mgmt caused issues
-  Misconfigured IP (overlap) between wazuh and mgmt02 caused issues
   Inconsistent connection seen on wazuh
