@@ -18,3 +18,6 @@ Target computer
 Other operating system notes
   Ubuntu - install with apt-get (apt-get install rsyslog)
   Rocky Linux - install with dnf (dnf install rsyslog)
+  VyOS - Installed by default
+    set system syslog host [host IPv4] facility authpriv level info - sends logon and failed logon info to server as well as less useful authenitcation messages
+    
