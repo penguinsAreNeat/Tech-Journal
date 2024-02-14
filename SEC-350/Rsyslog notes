@@ -3,7 +3,7 @@ Rsyslog host setup - desinged for CentOS7, see Other for different operating sys
   Restart program after making changes (systemctl enable, restart)
   Allow traffic from TCP/UDP 514 in firewall
 
-  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception" in the /etc/rsyslog.conf file and create a custom drop-in file (see Drop-In at the bottom for details)
+  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception" in the /etc/rsyslog.conf file and create a custom drop-in file in /etc/rsyslog.d (see Drop-In at the bottom for details)
     Messages will be sent to /var/log/syslog by default
     To enable high-precision timestamps, uncomment the "Action File Default Template" in the Global Directives section
     Test - netstat -tupan | grep 514, should show Listen labels on port 514
