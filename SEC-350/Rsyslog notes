@@ -3,7 +3,7 @@ Rsyslog host setup - desinged for CentOS7, see Other for different operating sys
   Restart program after making changes (systemctl enable, restart)
   Allow traffic from TCP/UDP 514 in firewall
 
-  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception" in the /etc/rsyslog.conf file
+  To recieve rsyslog messages uncomment the lines in the Modules section labled "Provides (UDP/TCP, for both of these) syslog reception" in the /etc/rsyslog.conf file and create a custom drop-in file (see Drop-In at the bottom for details)
     Messages will be sent to /var/log/syslog by default
     To enable high-precision timestamps, uncomment the "Action File Default Template" in the Global Directives section
     Test - netstat -tupan | grep 514, should show Listen labels on port 514
@@ -21,4 +21,14 @@ Other operating system notes
   VyOS - Installed by default
     set system syslog host [host IPv4] facility authpriv level info - sends logon and failed logon info to server as well as less useful authenitcation messages
     delete system syslog host [IPv4] - deletes configuration
-    
+
+
+Drop-on log configuration file:
+module(load="imudp")
+input(type="imudp" port="514" ruleset="RemoteDevice")
+template(name="DynFile" type="string"
+	string="/var/log/remote-syslog/%HOSTNAME%/%$YEAR%.%$MONTH%.%$DAY%.%PROGRAMNAME%.log"
+)
+ruleset(name="RemoteDevice"){
+	action(type="omfile" dynaFile="DynFile")
+}
