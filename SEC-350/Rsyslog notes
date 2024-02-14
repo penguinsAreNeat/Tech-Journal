@@ -8,7 +8,6 @@ Rsyslog host setup - desinged for CentOS7, see Other for different operating sys
     Test - netstat -tupan | grep 514, should show Listen labels on port 514
 
   Authorization logging - add "authpriv.* @[host IPv4]" to the /etc/rsyslog.conf file
-    VyOS - set system syslog host [host IPv4] facility authpriv level info
 
   Drop-in file configuration: Re-comment the "Provides (UDP/TCP, for both of these) syslog reception" lines in the /etc/ryslog.conf file and create a custom drop-in file in /etc/rsyslog.d (see Drop-In at the bottom for example)
 
@@ -25,6 +24,7 @@ Other operating system notes
   VyOS - Installed by default
     set system syslog host [host IPv4] facility authpriv level info - sends logon and failed logon info to server as well as less useful authenitcation messages
     delete system syslog host [IPv4] - deletes configuration
+    VyOS - set system syslog host [host IPv4] facility authpriv level info - authorization logging
 
 
 Drop-on log configuration file (in /etc/rsyslog.d), messages will be sent to /var/log/syslog by default:
