@@ -15,10 +15,10 @@ Networking
   delete interfaces ethernet [interface] address dhcp - deletes DHCP config
 
 NAT/DNS Fowarding
-  set nat source rule [int-name] description [text]
+  set nat source rule [int-name] description ["text"]
   set nat source rule [int-name] outbound-interface [interface]
   set nat source rule [int-name] source address [IPv4/m] - [IPv4] is the internal network to be translated
-  set nat source rule [int-name] trnaslation address masquerade
+  set nat source rule [int-name] translation address masquerade
 
   set service dns fowarding listen-address [IPv4] - [IPv4] is the internal network to be translated
   set service dns fowarding allow-from [IPv4/m] - [IPv4/m] is the internal subnet to be translated
