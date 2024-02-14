@@ -2,20 +2,15 @@ Active networks:
   WAN
   DMZ
   LAN
-  MGMT
 
 Active machines:
   rw01 (WAN) - Ubuntu, exterior computer
   fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
   web01 (DMZ) - CentOS7, hosts company website
   log01 (DMZ) - CentOS7, handles log information
-  wks01 (LAN) - Windows 10
-  fw-mgmt (LAN/MGMT) - VyOS firewall between LAN and MGMT
 
 Task: 
   Add more time detail to rsyslog reports (web01, log01)
-  Initalize wks01, fw-mgmt
-  Configure VyOS on fw-mgmt and set up routing between LAN and MGMT
 
 See Rsyslog notes for config
 Rsyslog testing: logger -t test [text]
