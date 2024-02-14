@@ -23,7 +23,7 @@ Other operating system notes
     delete system syslog host [IPv4] - deletes configuration
 
 
-Drop-on log configuration file:
+Drop-on log configuration file (in /etc/rsyslog.d):
 module(load="imudp")
 input(type="imudp" port="514" ruleset="RemoteDevice")
 template(name="DynFile" type="string"
