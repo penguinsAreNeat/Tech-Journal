@@ -24,6 +24,10 @@ NAT/DNS Fowarding
   set service dns fowarding allow-from [IPv4/m] - [IPv4/m] is the internal subnet to be translated
   set service dns fowarding system
 
+RIP
+  set protocols rip interface [interface]
+  set protocole rip network [IPv4/m]
+
 Users
   set system login user [name] full-name "[text]"
   set system login user [name] authentication plaintext-password [password]
