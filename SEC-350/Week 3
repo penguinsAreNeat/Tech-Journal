@@ -18,4 +18,6 @@ Task:
   Initalize wks01, fw-mgmt, mgmt02
   Configure VyOS on fw-mgmt and set up routing between LAN and MGMT
 
+Netplan notes:
+
 Lab observations:
