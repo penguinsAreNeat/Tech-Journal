@@ -34,4 +34,5 @@ Users
   set system login user [name] authentication plaintext-password [password]
   set system login user [name] level admin
 
+Double-tap tab to show possible statements in terminal
 VyOS quickstart guide: https://docs.vyos.io/en/equuleus/quick-start.html
