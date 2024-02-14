@@ -20,6 +20,7 @@ See Rsyslog notes for config
 Rsyslog testing: logger -t test [text]
 
 SSH configuration:
+  ssh-kgen - generates keys, saved by default to /home/[user]/.ssh/id_rsa
 
 Lab observations:
 
