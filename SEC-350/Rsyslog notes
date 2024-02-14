@@ -20,5 +20,5 @@ Other operating system notes
   Rocky Linux - install with dnf (dnf install rsyslog)
   VyOS - Installed by default
     set system syslog host [host IPv4] facility authpriv level info - sends logon and failed logon info to server as well as less useful authenitcation messages
-    delete system syslog host - deletes configuration
+    delete system syslog host [IPv4] - deletes configuration
     
