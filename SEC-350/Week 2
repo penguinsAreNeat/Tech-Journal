@@ -20,6 +20,7 @@ Rsyslog testing: logger -t test [text]
 
 Lab observations:
 
+
 Drop-in log configuration file:
 module(load="imudp")
 input(type="imudp" port="514" ruleset="RemoteDevice")
