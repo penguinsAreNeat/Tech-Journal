@@ -3,6 +3,7 @@ Operations
   commit - updates configuration
   save - saves configuration
   exit
+  #add user details
 
 Networking
   set interfaces ethernet [interface] description [text] - creates description
