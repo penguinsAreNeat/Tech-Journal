@@ -14,6 +14,7 @@ Task:
   Add more time detail to rsyslog reports (web01, log01)
   Set up mgmt01, and installed Chrome Remote Desktop Session (https://remotedesktop.google.com/?pli=1)
   Replace existing log configuration with drop-in file on log01
+  Add authorization logs to web01 and fw01
   
 See Rsyslog notes for config
 Rsyslog testing: logger -t test [text]
