@@ -19,6 +19,8 @@ Task:
 See Rsyslog notes for config
 Rsyslog testing: logger -t test [text]
 
+SSH configuration:
+
 Lab observations:
 
 
