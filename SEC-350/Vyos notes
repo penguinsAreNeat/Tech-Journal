@@ -1,5 +1,5 @@
 Operations
-  configure - enables editiing
+  configure - enables editing (all commands other than shown are assumed to be run in this mode)
   commit - updates configuration
   save - saves configuration
   exit
