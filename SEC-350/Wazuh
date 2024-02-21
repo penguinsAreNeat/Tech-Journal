@@ -14,6 +14,7 @@ Add client:
 Troubleshooting:
   Check var log at: /var/ossec/logs/ossec.log
   Test port open: nc -zv [host IPv4] 1514 1515 55000
+  Caution: Wazuh gets finicky if it goes without power or is restarted, check logs with "journalctl -u wazuh-dashboard |grep -i -E "$(date +%F).*(error|warn)"
 
 Users:
   Password change (host terminal):
