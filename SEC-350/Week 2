@@ -23,6 +23,10 @@ SSH configuration, in order:
   ssh-kgen - generates keys, saved by default to /home/[user]/.ssh
     It is reccommended that you use a passphrase you remember
   ssh-copy-id [user]@[target IPv4] - copies key to target computer
+    Alternative - cat ~/.ssh/id_rsa.pub | ssh [user]@[remote IPv4] "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  ssh keybased authentication should now be set up
+  sudo nano /etc/ssh/sshd_config - set "Password Authentication" here to "no" to complete configuration
+  Note: Remember to restart sshd when finished
 
 Lab observations:
 
