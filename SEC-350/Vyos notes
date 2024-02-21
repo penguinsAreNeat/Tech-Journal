@@ -26,6 +26,7 @@ NAT/DNS Fowarding
   set service dns fowarding system
 
 RIP
+  # Enable rip on outgoing interface and advertise connected networks
   set protocols rip interface [interface]
   set protocols rip network [IPv4/m]
 
