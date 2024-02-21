@@ -27,7 +27,7 @@ NAT/DNS Fowarding
 
 RIP
   set protocols rip interface [interface]
-  set protocole rip network [IPv4/m]
+  set protocols rip network [IPv4/m]
 
 Users
   set system login user [name] full-name "[text]"
