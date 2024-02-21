@@ -1,2 +1,21 @@
-Setup
+Setup:
   Install (Capital "O" letter in -sO): curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+    # add -i to ignore minimum hardware requirement (2CPU, 4GB RAM)
+  # Wazuh should now be available at the IP address (browser) of the computer
+
+Add client:
+  Create group if nessecary (Note: these are case sensitive, reccomend all caps)
+  Add agent, fill out the relevant fields (and use the host IPv4)
+  Take that command and run it on the client machine
+    Example: "WAZUH_MANAGER="10.0.0.2" yum install wazuh-agent"
+  Using sytemctl, enable and start wazuh on client machine
+  Remember to open port 1514/tcp, 1515/tcp, and 55000/tcp for wazuh (see troubleshooting)
+
+Troubleshooting:
+  Check var log at: /var/ossec/logs/ossec.log
+  Test port open: nc -zv [host IPv4] 1514 1515 55000
+
+Users:
+  Password change (host terminal):
+    Install the following tool: curl -so wazuh-passwords-tool.sh https://packages.wazuh.com/4.7/wazuh-passwords-tool.sh
+    Change password for a single user: bash wazuh-passwords-tool.sh -u [user] -p [password]
