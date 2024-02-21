@@ -2,7 +2,7 @@ Active networks:
   WAN
   DMZ
   LAN
-  MGMT
+    MGMT
 
 Active machines:
   rw01 (WAN) - Ubuntu, exterior computer
@@ -17,7 +17,9 @@ Active machines:
 
 Task: 
   Initalize wks01, fw-mgmt, mgmt02
-  Configure VyOS on fw-mgmt and set up routing between LAN and MGMT
+  Configure VyOS on fw-mgmt and set up routing between LAN and MGMT (port fowarding, DNS)
+  Update fw01 configuration to support traffic from MGMT to WAN
+  Set up RIP on fw01 and fw-mgmt
 
 Netplan notes:
 
