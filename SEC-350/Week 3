@@ -22,8 +22,13 @@ Task:
   Update fw01 configuration to support traffic from MGMT to WAN
   Set up RIP on fw01 and fw-mgmt
   Shutdown log01
+  Set up wazuh on wazuh
+  Configured web01 to the Linux group in wazuh
 
-Netplan notes:
+Netplan notes (from https://netplan.readthedocs.io/en/stable/netplan-tutorial/#running-netplan-for-the-first-time):
+  See config: netplan get
+    Detailed: netplan status --all
+  
 
 Lab observations:
   Misconfigured IP (overlap) bewteen mgmt01 and fw-mgmt caused issues
