@@ -1,3 +1,9 @@
+Active networks:
+  WAN
+  DMZ
+  LAN
+    MGMT
+
 Active machines:
   rw01 (WAN) - Ubuntu, exterior computer
   fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
@@ -7,3 +13,5 @@ Active machines:
   mgmt01 (LAN) - Ubuntu
   mgmt02 (MGMT) - Windows Server 2016
   wazuh (MGMT) - Ubuntu
+
+Task:
