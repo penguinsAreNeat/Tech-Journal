@@ -15,3 +15,5 @@ Active machines:
   wazuh (MGMT) - Ubuntu
 
 Task:
+
+A issue with the RIP LAN subnet (172.16.50.0) being assinged to the incorrect interface caused some issues
