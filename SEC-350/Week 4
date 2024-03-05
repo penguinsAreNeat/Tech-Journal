@@ -17,3 +17,4 @@ Active machines:
 Task:
 
 A issue with the RIP LAN subnet (172.16.50.0) being assinged to the incorrect interface caused some issues
+Issues with VyOS source IP addresses meant that in some cases only the destination IP firewall filter was applied
