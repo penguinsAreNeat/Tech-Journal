@@ -11,3 +11,5 @@ Firewall
   ifconfig
   firewall-cmd --list-all
   firewall-cmd --zone=public --permanent --add-port=[port]/(tcp/udp)
+
+Add YAML config
