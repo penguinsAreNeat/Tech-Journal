@@ -13,3 +13,6 @@ Firewall
   firewall-cmd --zone=public --permanent --add-port=[port]/(tcp/udp)
 
 Add YAML config
+
+Systems
+  network-manager (systemd-networkd)
