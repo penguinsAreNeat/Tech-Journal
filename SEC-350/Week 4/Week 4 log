@@ -15,6 +15,17 @@ Active machines:
   wazuh (MGMT) - Ubuntu
 
 Task:
+  Create firewalls between the DMZ, WAN, and LAN
+  Allow inbound HTTP traffic to web01
+  Allow established connections on firewalls
+  Allow SSH connections from mgmt01 to DMZ
+  Create a firewall between LAN and MGMT
+
+Firewall config:
+  set zone-policy zone [name] interface [interface] - Creates the zone used to identify networks
+  set firewall name [name] default-action drop - Creates firewall, drops all by default
+  set firewall name [name] enable-default-log - Enables logging
+  set zone-policy zone [zone1] from [zone2] firewall name [name] - Assigns a firewall for zone2 from zone1, remember to do a vise-versa firewall
 
 A issue with the RIP LAN subnet (172.16.50.0) being assinged to the incorrect interface caused some issues
 Issues with VyOS source IP addresses meant that in some cases only the destination IP firewall filter was applied
