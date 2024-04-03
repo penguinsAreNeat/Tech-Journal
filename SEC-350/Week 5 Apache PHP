@@ -15,6 +15,11 @@ Active machines:
   wazuh (MGMT) - Ubuntu
 
 Task:
+  Secure web01 with mod_security
+  Install a webshell on web01
+
+mod_security was installed with the following command:
+sudo yum install mod_security mod_security_crs php php-common php-opcache php-cli php-cli php-gd php-curl php-mysqlnd
 
 Note:
 The webshell had tp be manually typed in, finding a way to download it will be important in the future
