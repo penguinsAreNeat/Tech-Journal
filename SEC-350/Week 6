@@ -1,1 +1,22 @@
+Active networks:
+  WAN
+  DMZ
+  LAN
+    MGMT
 
+Active machines:
+  rw01 (WAN) - Ubuntu, exterior computer
+  fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
+  web01 (DMZ) - CentOS7, hosts company website
+  jump01 (DMZ) - Ubuntu, ssh access point for WAN computers
+  wks01 (LAN) - Windows 10
+  fw-mgmt (LAN/MGMT) - VyOS firewall between LAN and MGMT
+  mgmt01 (LAN) - Ubuntu
+  mgmt02 (MGMT) - Windows Server 2016
+  wazuh (MGMT) - Ubuntu
+
+Task:
+  Remove rw01's manual routing so it no longer can directly access the internal networks
+  Add port forwarding to fw01 so that rw01 has a network access point
+  Set up passwordless ssh between rw01 and jump01, and set fw01's port forwarding to jump01
+  Add jump01 to wazuh
