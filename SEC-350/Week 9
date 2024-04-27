@@ -1,1 +1,30 @@
+Active networks:
+  WAN
+  DMZ
+  LAN
+    MGMT
 
+Active machines:
+  traveler01 (WAN) - Windows, exterior computer
+  fw01 (WAN/LAN/DMZ) - VyOS firewall, handles routing
+  web01 (DMZ) - CentOS7, hosts company website
+  jump01 (DMZ) - Ubuntu, ssh access point for WAN computers
+  wks01 (LAN) - Windows 10
+  fw-mgmt (LAN/MGMT) - VyOS firewall between LAN and MGMT
+  mgmt01 (LAN) - Ubuntu
+  mgmt02 (MGMT) - Windows Server 2016
+  wazuh (MGMT) - Ubuntu
+
+  removed rw01
+  added traveler01
+
+Task:
+  Enable RDP on mgmt02
+  Set up traveler01
+  Use SSH and RDP to acess mgmt02 from traveler01
+
+RDP:
+  Enable on Windows Server by
+
+RDP through SSH jump box:
+  
