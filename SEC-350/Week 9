@@ -28,5 +28,8 @@ RDP:
   Remember to add the relevant authorized users in the select users menu
 
 RDP through SSH jump box:
-  Configure Putty to go to the jump box
-  In the 
+  Configure Putty to go to the jump computer
+  In the Connections - SSH - Tunnels tab, fill out the source port field (any unused port) and the [target IP]:3389 in the destination field, then click add
+  Open the Putty connection and log in to the jump box
+  Then open a RDP session to [loopback IPv4]:[source port], with source port being what you entered into the Putty field; 127.0.0.1 will work fine for the loopback address
+  Assuming RDP privleges have been correctly configured for your user, that should work
