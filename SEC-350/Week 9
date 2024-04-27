@@ -24,7 +24,9 @@ Task:
   Use SSH and RDP to acess mgmt02 from traveler01
 
 RDP:
-  Enable on Windows Server by
+  Enable on Windows Server by opening Control Panel, click System, allow Remote Access, then enable
+  Remember to add the relevant authorized users in the select users menu
 
 RDP through SSH jump box:
-  
+  Configure Putty to go to the jump box
+  In the 
