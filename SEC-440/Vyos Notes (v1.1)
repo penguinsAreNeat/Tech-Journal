@@ -1,0 +1,58 @@
+Operations
+  configure - enables editing (all commands other than shown are assumed to be run in this mode)
+  commit - updates configuration
+  save - saves configuration
+  exit
+  #add user details
+
+Networking
+  set interfaces ethernet [interface] description [text] - creates description
+  set interfaces ethernet [interface] address [IPv4/m]
+
+  set protocol static route [IPv4/m] next-hop [gateway] - Static routring, [0.0.0.0/0] is default
+  set system name-server [IPv4]
+
+  show interfaces
+  delete interfaces ethernet [interface] address dhcp - deletes DHCP config
+  Note: Remember to add NAT if the WAN is a different subnet
+
+NAT/DNS Fowarding
+  set nat source rule [int-name] description ["text"]
+  set nat source rule [int-name] outbound-interface [interface]
+  set nat source rule [int-name] source address [IPv4/m] - [IPv4/m] is the internal network to be translated
+  set nat source rule [int-name] translation address masquerade
+
+  set service dns fowarding listen-address [IPv4] - [IPv4] is the interface ip that will be recieving dns requests
+  set service dns fowarding allow-from [IPv4/m] - [IPv4/m] is the internal subnet to be translated
+  set service dns fowarding system
+
+Firewall config:
+  Replace set with delete to delete a config
+
+  set zone-policy zone [name] interface [interface] - Creates the zone used to identify networks
+  set firewall name [name] default-action drop - Creates firewall, drops all by default
+  set firewall name [name] enable-default-log - Enables logging
+  set zone-policy zone [zone1] from [zone2] firewall name [name] - Assigns a firewall for zone2 from zone1, remember to do a vise-versa firewall
+
+  set firewall name [name] rule [int] action [drop, accept] - Creates a new firewall rule numbered [int], with a default action
+  set firewall name [name] rule [int] description "[text]" - Adds description
+  set firewall name [name] rule [int] [disable, enable] - Enable or disable rule
+
+  set firewall name [name] rule [int] [source, destination] address [IPv4, IPv4/s]
+  set firewall name [name] rule [int] [source, destination] port [port ID, name, int range]
+    Note - Lists can be used in the IPv4/port ID fields, such as '5, 23-46'
+    Note - adding a '!' to the IPv4/port ID field will allow everything but that entry
+  set firewall name [name] rule [int] protocol [tcp, udp, tcp_udp, int 0-255]
+
+RIP
+  # Enable rip on outgoing interface and advertise connected networks
+  set protocols rip interface [interface]
+  set protocols rip network [IPv4/m]
+
+Users
+  set system login user [name] full-name "[text]"
+  set system login user [name] authentication plaintext-password [password]
+  set system login user [name] level admin
+
+Double-tap tab to show possible statements in terminal
+VyOS quickstart guide: https://docs.vyos.io/en/equuleus/quick-start.html
