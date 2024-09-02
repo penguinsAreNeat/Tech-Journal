@@ -14,6 +14,7 @@ Networking
 
   show interfaces
   delete interfaces ethernet [interface] address dhcp - deletes DHCP config
+  Note: Remember to add NAT if the WAN is a different subnet
 
 NAT/DNS Fowarding
   set nat source rule [int-name] description ["text"]
