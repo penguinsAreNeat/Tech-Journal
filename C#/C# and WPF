@@ -1,9 +1,26 @@
 Variables
+  string
+  int
+    long
+  float
+    double
+    decimal
+  bool
+
+  (type)var; typecasts the variable to the other variable "type"
+  Convert; TBA
+
+  Note: ++/-- executes differently if placed at front or end of variable
 
 Comments
   //
-  /*   */
+  /*  */
+  #Region  #EndRegion; Collapseable zone in VS
 
-Console
+<details>
+<summary>Console</summary>
+  Write
   WriteLine
   ReadLine
+  ForegroundColor
+</details
